@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_CSS选择器2</title>
+    <style>
+        /*  3.目标伪类
+        :target 匹配URL指向的元素
+        */
+        /*p,div {*/
+        /*    height: 600px;*/
+        /*}*/
+        /*p:target {*/
+        /*    color: red;*/
+        /*}*/
+
+    /*  4.UI元素(表单元素)状态伪类  */
+    /*    input:disabled {*/
+    /*        background-color: #f00;*/
+    /*    }*/
+    /*    input:enabled {*/
+    /*        background-color: #573cff;*/
+    /*    }*/
+    /*    !*:checked 只在Opera中有效 *!*/
+    /*    input:checked {*/
+    /*        color: #ac8829;*/
+    /*    }*/
+        /*:selection 被选中的文本
+        注意:必须用双冒号!
+         */
+        ::selection {
+            color: #f00;
+        }
+
+    /*  5.否定伪类
+        :not()
+    */
+       /* p {*/
+       /*     height: 10px;*/
+       /* }*/
+       /*.container:not(p) {*/
+       /*     background-color: #f00;*/
+       /*     color: #ffffff;*/
+       /* }*/
+
+    /*  6.通用兄弟元素选择器
+      */
+        .div1~.div2{
+            color: red;
+        }
+        .div1~.div3{
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#jump1">跳转1</a>
+    <a href="#jump2">跳转2</a>
+    <a href="#jump3">跳转3</a>
+    <br><br><br><br>
+    <p id="jump1">这是段落1 的内容</p>
+    <div id="jump2">这是段落2 的内容</div>
+    <p id="jump3">这是段落3 的内容</p>
+
+    <form action="">
+        <input type="text" disabled><br>
+        <input type="text"><br>
+        <input type="text"><br>
+        <input type="checkbox"name="face" checked>党员
+        <input type="checkbox"name="face" >团圆
+        <input type="checkbox"name="face" >无党派人士
+        <select name="" id="">
+            <option >前端开发</option>
+            <option selected>大数据开发</option>
+            <option >UI设计</option>
+        </select>
+    </form>
+
+    <div class="container">
+        <p>p1</p>
+        <p>p2</p>
+        <span>span</span>
+        <em>em</em>
+    </div>
+    <div class="test">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨行/跨列表格</title>
+</head>
+<body>
+<!--table[border=1 width=500 align=center]>tr*3>td{内容$$}*3-->
+<table border="1" width="500" align="center" cellspacing="0">
+    <tr>
+<!-- valign 垂直对齐方式:(top/middle/bottom)      -->
+        <td rowspan="2" align="center" valign="top">内容01</td>
+        <td>内容02</td>
+<!--    合并3行单元格    -->
+        <td rowspan="3">内容03</td>
+    </tr>
+    <tr>
+        <td>内容01</td>
+    </tr>
+    <tr align="center">
+        <td>内容01</td>
+        <td>内容02</td>
+    </tr>
+</table>
+
+</body>
+</html>

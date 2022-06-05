@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09_遍历数组</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //一维数组的遍历
+    var  arry1 = [1,2,3,4,5,6,6,7]
+    for (let i = 0 ;i < arry1.length; i++) {
+        console.log(arry1[i])
+    }
+    //for...in
+    for (let i in arry1) {
+        console.log(arry1[i])
+    }
+
+    //for each
+    arry1.forEach((value,index)=>{
+        console.log('value:',value,'index:',index)
+    })
+
+//    数组方法
+    arry1.push(10)
+    // shift()删除数组中的第一个元素 [ 2, 3, 4, 5, 6, 6, 7, 10 ]
+    arry1.shift()
+    console.log('array1:',arry1)
+
+    //unshift() 在头部添加
+    arry1.unshift(20)
+    // [ 20, 2, 3, 4, 5, 6, 6, 7, 10 ]
+    console.log('array1:',arry1)
+
+
+    // splice()
+    //删除/修改 向数组中添加数据
+    var array4 = [1,2,3,4]
+    console.log(array4)
+    //删除元素 ,从下标为1的元素位置开始删除,删除两个元素
+    var  array5 = array4.splice(1,2) //[2,3]
+    console.log(array4,array5)
+
+    //修改数据
+    var changeOldArray  = [1,2,3,4]
+    var changeArray = changeOldArray.splice(1,2,'333333')
+    //[2,3]  [ 1, "333333", 4 ]
+    console.log(changeArray,changeOldArray)
+
+    //中间添加
+    changeArray.splice(1,0,'bb')
+    // [ 2, "bb", 3 ]
+    console.log(changeArray)
+
+    //头部添加
+    changeArray.splice(0,0,'headAdd')
+    // [ "headAdd", 2, "bb", 3 ]
+    console.log(changeArray)
+
+    //尾部添加
+    changeArray.splice(changeArray.length ,0,'tailAdd')
+    //[ "headAdd", 2, "bb", 3, "tailAdd" ]
+    console.log(changeArray)
+
+</script>
+</html>

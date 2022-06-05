@@ -1,0 +1,7 @@
+.box {
+    /*通过导入外部样式引入*/
+    margin: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: blue;
+}

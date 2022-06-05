@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_关系运算符</title>
+</head>
+<body>
+
+</body>
+<script>
+    console.log(30>20)
+    console.log(30>=20)
+    console.log('a' < 'AJKLJO') //false
+    console.log('a' < 'aJKLJO') //true
+    console.log('张三:','张三'.charCodeAt(0))
+    console.log('李四','李四'.charCodeAt(0))
+    console.log(true > 0) // true 和数字比较时,true会自动转换为数字1,false转换为0
+
+//     * 如果两个中任意一个操作数非逻辑值,第一个操作数的结果为true时,返回第二个操作数的值
+//     * 如果第一个操作数为false,返回第一个操作数的值。
+    console.log('关系运算符----&&---start------')
+    console.log(12 && 13)  //13
+    console.log(0 && 'aa') // 0
+
+    console.log('关系运算符----||---start------')
+
+    //* 如果两个中的任意一个操作数为非逻辑值,第一个操作数的结果为true时,返回第一个操作数的值;
+    // * 第一个操作数的结果为false时,返回第二个操作数的值;
+    console.log(12 || 13)  //12
+    console.log(0 || 'aa') // 'aa'
+
+
+
+
+</script>
+</html>

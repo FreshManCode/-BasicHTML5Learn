@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day5</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .wrapper {
+            width: 1000px;
+            margin: 0 auto;
+            border-left: 5px solid lightgray;
+            border-right: 5px solid lightgray;
+            padding: 10px;
+        }
+        .headerImg img {
+            width: 400px;
+        }
+        .headTopNav {
+            overflow: hidden;
+            margin: 0px;
+            padding: 0px 25px;
+            background-color: #8b0000;
+        }
+
+        .headTopNav ul {
+            list-style-type: none;
+            height: 35px;
+            line-height: 35px;
+        }
+        .headTopNav ul li  {
+            float: left;
+            padding:  0 20px 0 18px;
+            border-right: 1px solid #ffffff;
+        }
+        .headTopNav ul li:last-child {
+            border-right: none;
+        }
+
+        .headTopNav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .headTopNav ul li a:hover {
+            color: #ffff00;
+        }
+        .headBottomNav {
+            padding: 8px 20px;
+            margin: 0px;
+            border-bottom: 2px solid #8b0000;
+            overflow: hidden;
+        }
+        .headBottomNav ul {
+            padding: 0px;
+            margin-left: 0px;
+            list-style-type: none;
+            /*height: 20px;*/
+            /*line-height: 20px;*/
+        }
+
+        .headBottomNav ul li {
+            margin: 0px 5px;
+            font-size: 12px;
+            float: left;
+            padding: 0 6px 0 2px;
+            border-right: 1px solid #d3d3d3;
+        }
+
+        /* last-child 作用于li 上生效 */
+        .headBottomNav ul li:last-child {
+            border-right: none;
+        }
+
+        .headBottomNav ul li a:hover {
+            color: #ffff00;
+        }
+
+        .headBottomNav ul li a {
+            text-decoration: none;
+            color: #666666;
+        }
+        .contentWrapper {
+            overflow: hidden;
+        }
+
+        .leftNav {
+            width: 220px;
+            float: left;
+            overflow: hidden;
+        }
+
+        .leftNav img {
+            width: 10px;
+            height: 10px;
+            background-color: #ff0000;
+        }
+        .leftNav .leftImage {
+            margin: 0px 10px;
+        }
+        .leftNav .rightImage {
+            float: right;
+            margin-right: 1px;
+            margin-top: 6px;
+        }
+
+        .leftNav ul {
+            border: 1px solid #f2f2f2;
+            margin-top: 10px;
+            list-style-type: none;
+            background-color: #f5f5f5;
+        }
+        .leftNav ul li {
+            overflow: hidden;
+            padding: 5px 10px;
+            margin-bottom: 1px;
+            border-bottom: 1px solid lightgray;
+        }
+
+
+        .leftNav ul li a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 13px;
+        }
+
+        .leftNav ul li a:hover {
+            color: yellow;
+        }
+
+        .mainContent {
+            padding: 10px;
+            width: 740px;
+            margin-top: 10px;
+            margin-left: 15px;
+            float: left;
+            border: 1px solid #f5f5f5;
+        }
+
+        .mainContentHeader {
+            padding: 5px 20px;
+            margin: 0;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid red;
+        }
+        .mainContentHeader img {
+            width: 10px;
+            height: 10px;
+            background-color: red;
+        }
+        .mainContentHeader span {
+            font-size: 18px;
+            font-family: bolder;
+        }
+
+        .content {
+            line-height: 1.5em;
+        }
+        .content p {
+            margin: 12px 0px;
+        }
+        .content h4 {
+            margin-top: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="wrapperContent">
+    <div class="wrapper">
+        <div class="headerImg">
+            <img src="../static/img/CMBHeader.png" alt="图片">
+        </div>
+        <div class="headerNav">
+            <div class="headTopNav">
+                <ul>
+                    <li><a href="#">主页</a></li>
+                    <li><a href="#">个人业务</a></li>
+                    <li><a href="#">公司业务</a></li>
+                    <li><a href="#">小企业</a></li>
+                    <li><a href="#">信用卡</a></li>
+                    <li><a href="#">i理财</a></li>
+                    <li><a href="#">商旅预定</a></li>
+                    <li><a href="#">今日招行</a></li>
+                </ul>
+            </div>
+            <div class="headBottomNav">
+                <ul>
+                    <li><a href="#">金葵花理财</a></li>
+                    <li><a href="#">私人人行</a></li>
+                    <li><a href="#">出国金融</a></li>
+                    <li><a href="#">个人贷款</a></li>
+                    <li><a href="#">空中银行</a></li>
+                    <li><a href="#">一卡通</a></li>
+                    <li><a href="#">财富账户</a></li>
+                    <li><a href="#">伙伴一生</a></li>
+                    <li><a href="#">电子银行</a></li>
+                    <li><a href="#">居家生活</a></li>
+                    <li><a href="#">储蓄业务</a></li>
+                    <li><a href="#">投资理财</a></li>
+                    <li><a href="#">网上个人银行</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="contentWrapper">
+            <div class="leftNav">
+                <ul>
+                    <li><a href="#"><img class="leftImage" src="" alt=""> 生意贷 <img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">生意一卡通<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">特色创新功能<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">一手住房贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">二手住房贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">购房专享装修贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">购房专享车位贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">个人消费贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">引用贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">金葵花客户尊享贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">工资贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">个人汽车贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">商业用放贷款<img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt=""> 生意贷 <img class="rightImage" src="" alt=""></a></li>
+                    <li><a href="#"><img class="leftImage" src="" alt="">生意一卡通<img class="rightImage" src="" alt=""></a></li>
+
+                </ul>
+            </div>
+            <div class="mainContent">
+                <div class="mainContentHeader">
+                    <img src="" alt="">
+                    <span>个人消费贷款</span>
+                </div>
+                <div class="content">
+                    <h4>适用客户</h4>
+                    <p>
+                        所有需要申请个人消费贷款的开户
+                    </p>
+                    <p>
+                        购车,装修,旅游,留学......各种用途任您选择!贷款金额最高达20000万元!30年
+                        超长期限,全方位满足您各种消费需求!把你的房产变成提款机,尽情享用!
+                    </p>
+                    <p>
+                       期限:授信期限最长可达30年
+                    </p>
+                    <p>
+                        成数:最高7成
+                    </p>
+                    <h4>办理流程</h4>
+                    <p>
+                        距你成功贷款,只有三步!
+                    </p>
+                    <p>
+                        第一步:提交申请
+                    </p>
+                    <p>
+                        第二步:银行审批
+                    </p>
+                    <p>
+                        第三步:提款消费
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>

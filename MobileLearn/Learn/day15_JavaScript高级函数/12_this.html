@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_this</title>
+</head>
+<body>
+
+</body>
+<script>
+    var x = 100;
+    y = 'abc'; //等价于window.y = 'abc'
+    console.log(x,y)
+    console.log(this.y) //这里的this代表的是window
+
+    var name = '李四'
+
+    var obj = {
+        name : '张三',
+        age :16,
+        fn:function () {
+            //this 指向的是当前执行这个函数的对象
+            console.log(this.name + this.age)
+        }
+    }
+
+    console.log(this.name) //this指向的是window
+    obj.fn();
+
+
+//   数组去重
+    function deleteRepeatElement(array = []) {
+        var newArray = []
+        array.forEach(value=>{
+            if (newArray.indexOf(value) == -1) {
+                newArray.push(value)
+            }
+        })
+        return newArray
+    }
+
+
+    function deleteRepeatElementMapMethod(array = []) {
+        var mapElements = {}
+        array.forEach(value=>{
+            if (!mapElements[value]) {
+                mapElements[value] = value
+            }
+        })
+        return Object.values(mapElements);
+    }
+
+
+    console.log('数组去重开始')
+    let array1 = [1,2,2,,3,4,5,6,5,3,6,10]
+    console.log(deleteRepeatElement(array1))
+
+    console.log(deleteRepeatElementMapMethod(array1))
+
+
+
+
+</script>
+</html>

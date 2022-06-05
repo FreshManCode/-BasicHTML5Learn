@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="文本格式化标签" content="文本格式化标签">
+    <link rel="shortcut icon" href="static/img/icon.png" >
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h3>文本格式化标签</h3>
+<!--    b 和 strong 都有加粗作用,且都是行级标签不会自动换行行,strong还有强调作用,用于SEO提取关键字-->
+   <div>
+       <h4>b和strong</h4>
+       <b>呵呵哒1</b>
+       <strong>呵呵哒2</strong>
+   </div>
+    <div >
+<!--        i和em都是倾斜,都是行级标签,不会自动换行;em具有强调作用,如果仅仅是倾斜效果,使用i足够-->
+        <h4>i和em</h4>
+        <i>倾斜呵呵</i>
+        <em>倾斜且强调</em>
+    </div>
+
+    <div>
+        <h4>pre预格式化文本</h4>
+<!--        保留换行和文本宽度,文字的字号会小一号-->
+        <pre>保留换行和
+
+                文本宽度</pre>
+    </div>
+
+    <div>
+        <h4>small和big</h4>
+<!--        文字缩小/文字放大;big在html5中已经被废弃了,但仍可以使用,在实际开发中尽量不要使用已经废弃的标签
+浏览器支持的最小字号字体是12号字体,如果需要显示小于12号字体的效果,需要特殊处理
+-->
+        <p>我是正常文字哈哈</p>
+        <small>我是小文字</small>
+        <big>我是打蚊子哈哈</big>
+    </div>
+    <div>
+        <h4>sub和sup 用来设置文本下标和上标;用来调整文本正常显示的基线,并且文字会自动小一号</h4>
+        <p>这是一个下标事例</p>
+        <p>
+           下标: X <sub>1</sub> + X<sub>2</sub> = Y
+        </p>
+        <p>这是一个上标事例</p>
+        <p>
+           上标:  2<sup>2</sup> + 3<sup>2</sup> = 13
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_文本溢出</title>
+    <style>
+
+        /* 单行文字溢出处理步骤,以下步骤
+        1.宽度
+        2.不允许换行
+        3. text-overflow
+        4.overflow: hidden;
+        */
+        p {
+            width: 300px;
+            border: 1px solid #000000;
+            /*禁止换行*/
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .p2 {
+            text-overflow: ellipsis;
+            -ms-text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .p3 {
+            /*裁剪文字 */
+            text-overflow: clip;
+            -ms-text-overflow: clip;
+            overflow: hidden;
+        }
+        /* 多行文本溢出 */
+        .p4 {
+            width: 300px;
+            white-space: normal;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            /* 最多显示3行 */
+            -webkit-line-clamp:3;
+            overflow:hidden;
+
+        }
+
+    </style>
+</head>
+<body>
+<p class="p1">
+    要说近期有什么合资车热度最高，那么无疑是长安福特全新一代蒙迪欧了，无它，官方放下身段自救，用大降价再次换回用户的关注度。预售期间10天订单就破7000辆，用价格强势让蒙迪欧回到大众的视野。
+</p>
+<p class="p2">
+    要说近期有什么合资车热度最高，那么无疑是长安福特全新一代蒙迪欧了，无它，官方放下身段自救，用大降价再次换回用户的关注度。预售期间10天订单就破7000辆，用价格强势让蒙迪欧回到大众的视野。
+</p>
+
+<p class="p3">
+    要说近期有什么合资车热度最高，那么无疑是长安福特全新一代蒙迪欧了，无它，官方放下身段自救，用大降价再次换回用户的关注度。预售期间10天订单就破7000辆，用价格强势让蒙迪欧回到大众的视野。
+</p>
+
+<p class="p4">
+    要说近期有什么合资车热度最高，那么无疑是长安福特全新一代蒙迪欧了，无它，官方放下身段自救，用大降价再次换回用户的关注度。预售期间10天订单就破7000辆，用价格强势让蒙迪欧回到大众的视野。
+</p>
+
+</body>
+</html>

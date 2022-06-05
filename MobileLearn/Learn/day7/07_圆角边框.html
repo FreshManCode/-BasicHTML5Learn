@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_圆角边框</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #999999;
+            margin: 100px auto;
+            /*-webkit-border-radius: 10px;*/
+            /*-moz-border-radius: 10px;*/
+            /*border-radius: 10px ;*/
+
+            /*border-top-left-radius:10px;*/
+            /*-webkit-border-top-left-radius:10px;*/
+            /*-moz-border-top-left-radius:10px;*/
+
+            /* 两个参数 第一个参数对应的是左上和右下,第2个参数对应的是右上和左下 */
+            /*-webkit-border-radius: 10px 30px;*/
+            /*-moz-border-radius: 10px 30px;*/
+            /*border-radius: 10px 30px;*/
+
+            /* 携带3个参数
+            第一个参数对应左上
+            第2个参数对应右上和左下
+            第三个参数对应的是右下
+             */
+            /*-webkit-border-radius: 10px 20px 30px;*/
+            /*-moz-border-radius: 10px 20px 30px;*/
+            /*border-radius: 10px 20px 30px;*/
+
+            /* 携带4个参数  顺时针方向
+            每个参数分别对应的是,左上,右上,右下,左下
+
+            */
+            -webkit-border-radius: 10px 20px 30px 40px;
+            -moz-border-radius: 10px 20px 30px 40px;
+            border-radius: 10px 20px 30px 40px;
+        }
+        img {
+            width: 100px;
+            margin: 100px auto;
+            display: block;
+            border-radius: 10px;
+        }
+        /* 鼠标悬停,取消圆角 */
+        img:hover{
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <img src="../static/img/imagecode.png" alt="Test">
+
+
+</body>
+</html>

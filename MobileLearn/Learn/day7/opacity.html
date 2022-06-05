@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>opacity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        ul {
+            width: 550px;
+            height: 44px;
+            line-height: 44px;
+            margin: 100px auto 0;
+        }
+        ul  li {
+            /* inline-block 布局,默认会有间距排列,需要使用margin-left 一个负值来消除间距 */
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+            background-color: #81ff3d;
+        }
+        /* 从第二个li标签开始左偏移-5像素*/
+        ul li+li {
+            margin-left: -5px;
+        }
+        ul li:hover {
+            background-color: #81ff3d;
+            color: yellow;
+            opacity: .5;
+            /*IE8及IE8以下的版本不识别opacity代码,但是可以识别该代码 */
+            filter: alpha(opacity=50);
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>菜单项</li>
+        <li>菜单项</li>
+        <li>菜单项</li>
+        <li>菜单项</li>
+        <li>菜单项</li>
+    </ul>
+
+</body>
+</html>

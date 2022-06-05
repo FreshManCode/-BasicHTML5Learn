@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_Number类型</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //1.属性
+    console.log(Number.MAX_VALUE)
+    console.log(Number.MIN_VALUE)
+
+    //NaN 将字符串转为数值型数据,如果字符串不是数组组成的,转换结果为NaN
+    console.log(Number('acb')) //NaN
+    //isNaN :用来判断是否为非数值 不是数值返回true,是数值返回false
+    console.log(isNaN(123)) //false
+
+
+    //2.方法
+    var box = 1000.79
+    console.log(box.toString())
+    //十六进制结果输出
+    console.log(box.toString(16))
+    console.log(box.toLocaleString())
+    //输出保留指定位数
+    console.log(box.toFixed(3))
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器的分组以及样式继承</title>
+    <style type="text/css">
+        /*1.选择器的分组*/
+        h1,.box,p {
+            color: red;
+        }
+        p {
+            width: 100px;
+            background-color: #999999;
+        }
+
+        /*2.样式继承*/
+        .test {
+            font-size: 28px;
+
+        }
+        .test span {
+            font-weight: bold;
+            /*改写父元素传递过来的样式*/
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div>
+<!--  1.选择器的分组  -->
+    <h1>h1</h1>
+    <div class="box">
+        box
+    </div>
+    <p>p</p>
+
+<!--  2.样式的继承  -->
+    <div class="test">
+        这是一段测试内容 <span>内容;</span>
+    </div>
+
+</div>
+
+</body>
+</html>

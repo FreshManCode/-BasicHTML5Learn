@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!-- 1.设置meta标签   -->
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+<!-- 2. 设置IE渲染方式默认为最高版本 -->
+    <meta http-equiv="x-ua-compatible" content="IE=Edge,chrome=1">
+    <title>媒体查询1</title>
+<!-- 3.引入兼容的js文件	    -->
+    <!--[if lt IE 9]>
+        <script src="https://cdn.staticfile.org/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!--  4 进入CSS3提供的媒体查询  -->
+<!--  屏幕最大宽度不超过480px时加载这个css  -->
+    <link rel="stylesheet" href="./css/screen480.css" media="screen and (max-width:480px)">
+<!--  屏幕最大宽度不超过800px,最小宽度大于480px时加载这个css  -->
+    <link rel="stylesheet" href="./css/screen600.css" media="screen and (min-width:480px) and (max-width:800px)">
+<!--  屏幕最小宽度大于400时加载下面这个css  -->
+    <link rel="stylesheet" href="./css/screen_over800.css" media="screen and (min-width:800px)">
+</head>
+<body>
+
+</body>
+</html>

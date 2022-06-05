@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单浮动测试</title>
+    <style type="text/css">
+        p {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .wrapper {
+            width: 500px;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid lightgray;
+            /*height: 350px;*/
+            /*这个这是在有float的情况下不可省略*/
+            overflow: hidden;
+        }
+
+        .leftContainer {
+            float: left;
+            text-align: center;
+        }
+
+        .photo {
+            width: 120px;
+            height: 200px;
+            background-color: lightgray;
+
+            /*先转换为表格形式,然后设置垂直居中*/
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .name {
+            width: 120px;
+        }
+
+        .rightContainer {
+            margin-left: 15px;
+            width:300px ;
+            float: left;
+            border: 1px solid lightgray;
+            padding: 10px;
+            height: 300px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="leftContainer">
+        <div class="photo">头像</div>
+        <div class="name">姓名</div>
+
+    </div>
+    <div class="rightContainer">
+        <p>自我描述</p>
+    </div>
+
+</div>
+
+</body>
+</html>

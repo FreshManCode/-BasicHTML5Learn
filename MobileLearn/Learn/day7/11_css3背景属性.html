@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_css3背景属性</title>
+    <style>
+        /**
+        * 2.background-size:设定背景图片的尺寸
+	        *  background-size:固定长度|百分比值|cover|contain
+        * 3.background-origin:paddding-box|border-box|content-box
+        * 4.background-clip:设定背景的绘制区域
+	        * background-clip:border-box|padding-box|content-box
+         */
+        p{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto 0;
+            padding: 20px;
+            border: 10px solid rgba(55,255,63,0.46);
+            /*background: url(file/border.png) ;*/
+
+            /*-webkit-background-size:50% 30% ;*/
+            /*background-size:50% 30% ;*/
+
+            /*-webkit-background-size:50px 100px ;*/
+            /*background-size:50px 100px ;*/
+
+            /*-webkit-background-size:cover ;*/
+            /*background-size:cover ;*/
+
+            /*-webkit-background-size:contain ;*/
+            /*background-size:contain ;*/
+
+        /*  2.  background-origin*/
+            background-image: url(file/bg.png);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+
+
+            /*-webkit-background-origin:padding-box ;*/
+            /*background-origin:padding-box  ;*/
+
+            /*-webkit-background-origin:border-box ;*/
+            /*background-origin:border-box  ;*/
+
+            /*-webkit-background-origin:content-box ;*/
+            /*background-origin:content-box;*/
+
+        /* 3.background-clip: */
+            -webkit-background-clip:padding-box ;
+            background-clip:padding-box  ;
+
+            -webkit-background-clip:border-box ;
+            background-clip:border-box  ;
+
+            -webkit-background-clip:content-box ;
+            background-clip:content-box  ;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <p>
+        要说近期有什么合资车热度最高，那么无疑是长安福特全新一代蒙迪欧了，无它，官方放下身段自救，用大降价再次换回用户的关注度。预售期间10天订单就破7000辆，用价格强势让蒙迪欧回到大众的视野。
+        就以我这次参加活动去集合的4S店举例，3个月时间（其中有一个月的时间还是官方预售前）单店单车型订单超过100台，这放在前几年，可是福特4S店不敢想的事情。
+        有关于全新一代蒙迪欧的外观和内饰真的说过太多遍了，该说的都已经说过，这次我就不多聊，但是补充一些体验，例如发动机舱盖上隆起的线条。
+        要说近期有什么合资车热度最高，那么无疑是长安福特全新一代蒙迪欧了，无它，官方放下身段自救，用大降价再次换回用户的关注度。预售期间10天订单就破7000辆，用价格强势让蒙迪欧回到大众的视野。
+        就以我这次参加活动去集合的4S店举例，3个月时间（其中有一个月的时间还是官方预售前）单店单车型订单超过100台，这放在前几年，可是福特4S店不敢想的事情。
+        有关于全新一代蒙迪欧的外观和内饰真的说过太多遍了，该说的都已经说过，这次我
+    </p>
+
+</body>
+</html>

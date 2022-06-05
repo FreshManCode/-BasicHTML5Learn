@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_string类型</title>
+</head>
+<body>
+
+</body>
+<script>
+    var  str1 = '??How are you?'
+    var  str2 = new String('121221')
+    console.log(str1,str2)
+    console.log(str1.length,str2.length)
+
+    // charAt(n) 返回指定索引位置的字符
+    // charCodeAt(n) 返回指定索引位置字符的unicode编码
+    console.log(str1.charAt(2))
+    console.log(str1.charCodeAt(2))
+
+    // concat(str1...str2) 将字符串参数串联到调用该方法的字符串
+    str1 =  str1.concat('a','b','c','111')
+    console.log(str1) //How are you?abc111
+
+    // slice(n,m) 返回字符串n到m之间位置的字符串
+
+    console.log(str1.slice(2)) //w are you?abc111
+    //截取下标为2开始的位置开始,到下标为5之前,不包含下标5
+    console.log(str1.slice(2,5)) //w a
+
+    // substring(n,m)  返回字符串n开始的m个字符串
+
+    //从下标为2开始,截取5个字符
+    console.log(str1.substr(2,5)) //w are
+    //如果截取的个数不够,从指定下标截取到最后
+    console.log(str1.substr(2,111)) //w are you?abc111
+    // substr(n,m) 返回字符串n开始的m个字符串
+
+    // match(pattern):返回patter中的字串或null
+    console.log(str1.match('111')) //返回匹配的内容(是一个数组)
+    //wgiH,o,w,a,r,e,y,o,u,a,b,c,1,1,1
+    console.log('\wgi'+ str1.match(/\w/g)) //返回匹配的内容(是一个数组)
+    console.log(str1.match('1111111')) //无匹配的字符串返回null
+
+    console.log(str1.replace('?','.....')) //How are you.....abc111
+    //正则表达式规则 / /
+    console.log(str1.replace(/\?/g,'问号')) //问号问号How are you问号abc111
+
+
+
+</script>
+</html>

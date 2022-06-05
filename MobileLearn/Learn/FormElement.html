@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form表单学习</title>
+</head>
+<body>
+<style type="text/css">
+    input {
+        margin: 5px;
+    }
+
+    form {
+        border: 1px solid pink;
+        padding: 10px;
+    }
+
+</style>
+<form action="test.php" method="get" name="stuInfo">
+    <input type="text" name="userName" placeholder="请输入姓名">
+    <input type="submit">
+</form>
+<br>
+
+<!--文本框-->
+<form action="">
+<!--  input 默认type 为text  -->
+    <input type="text" placeholder="请输入一个数字"  maxlength="6" > <br/>
+    <input type="text" placeholder="请输入一个数字" value="100" disabled > <br/>
+    <input type="text" placeholder="请输入一个数字" value="100" readonly > <br/>
+
+</form>
+<br>
+
+
+<form action="test.php">
+    <!--2.密码框-->
+    <input type="password">
+    <br>
+
+<!--   3.单选框 -->
+    <input type="radio" name="sex" checked>男
+    <input type="radio" name="sex">女
+
+    <input type="radio" name="number">1
+    <input type="radio" name="number">2
+    <input type="radio" name="number">3
+
+    <br>
+<!--  4.复选框  -->
+    <input type="checkbox" name="hobby" checked>听音乐
+    <input type="checkbox" name="hobby">写代码
+    <input type="checkbox" name="hobby">跑步
+    <br>
+
+<!--  5.文件上传,type='file'  -->
+    <input type="file">
+    <br>
+
+<!--  6.普通按钮  -->
+    <input type="button" value="登录">
+    <br>
+
+<!--  7.图片按钮  -->
+    <input style="width: 20px;height: 20px" type="image" src="./static/img/icon.png" title="刷新">
+    <br>
+
+    <!-- 8. 提交按钮-->
+    <input type="submit">
+    <br>
+
+<!--   9.重置按钮 -->
+    <input type="reset" value="取消">
+    <br>
+
+<!--   10.textarea -->
+    <textarea name="memo" id="memo" cols="30" rows="10" ></textarea>
+    <br>
+
+<!--  11. select  -->
+    <label for="sex">性别</label>
+    <select  id="sex">
+        <option value="male">男</option>
+        <option value="female">女</option>
+    </select>
+    <br>
+
+    <label for="course">选课</label>
+    <select  id="course" multiple size="2">
+        <option value="yuwen">语文</option>
+        <option value="shuxue">数学</option>
+        <option value="jisuanji">计算机</option>
+        <option value="other">其它</option>
+    </select>
+    <br>
+</form>
+<!--  12. button  -->
+
+<!--这里的button主要用于调用js代码-->
+<button id="btnok">确认</button>
+<form action="test.php">
+    <input type="text" name="info">
+<!--   这里的button功能与input中的submit按钮功能一样 -->
+    <button>提交</button>
+</form>
+
+
+
+
+
+</body>
+</html>

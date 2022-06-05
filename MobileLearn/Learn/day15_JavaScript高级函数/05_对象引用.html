@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_对象引用</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj4 = {
+        aa : 'bb',
+        cc : true,
+        fn1 :function (a,b) {
+            console.log(a + b)
+        },
+        fn2:function () {
+            console.log('fn2fn2')
+        }
+    }
+    console.log(obj4.aa)
+    obj4.fn1('Hello','World')
+
+    var  testKey = 'aa'
+    //当属性名为变量时,只能使用[]去取值,且不能加引号,因为它是一个变量
+    console.log(obj4[testKey])
+
+
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_matrix</title>
+    <style>
+/**
+需求:将div右移100px,下移200px,旋转30度,x轴缩放1.5倍,y轴缩放2倍
+ */
+        .box{
+            width: 200px;
+            height: 150px;
+            background-color: #ff0000;
+            margin: 100px auto;
+            color: #ffffff;
+            /* 方法1 */
+            /*-webkit-transform: translate(100px,200px) rotate(30deg) scale(1.5,2);*/
+            /*-moz-transform: translate(100px,200px) rotate(30deg) scale(1.5,2);*/
+            /*-ms-transform: translate(100px,200px) rotate(30deg) scale(1.5,2);*/
+            /*transform: translate(100px,200px) rotate(30deg) scale(1.5,2);*/
+
+            /* 方法2 */
+            -webkit-transform: translate(100px,200px) rotate(30deg) scale(1.5,2);
+            -moz-transform: translate(100px,200px) rotate(30deg) scale(1.5,2);
+            -ms-transform: translate(100px,200px) rotate(30deg) scale(1.5,2);
+            transform: translate(100px,200px) rotate(30deg) scale(1.5,2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+</html>

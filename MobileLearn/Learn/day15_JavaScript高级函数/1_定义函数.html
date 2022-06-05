@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1_定义函数</title>
+</head>
+<body>
+
+</body>
+<script>
+/*
+* 函数的定义以及调用
+* */
+    //无参函数
+    function show1() {
+        console.log('这是我的第一个函数')
+    }
+    var show2 = function() {
+        console.log('这是我的第2个函数2')
+    }
+    // 如果不传参数,这里的括号不能省略
+    show1();
+    show2();
+
+    //有参函数,参数个数匹配;
+    //实参个数超过形参个数,将实参依次传给形参
+    function sum(a,b) {
+        var  rs = a + b
+        console.log('rs is:',rs)
+    }
+    //rs is: 7
+    sum(3,4,10)
+
+
+    // 参数个数匹配:形参个数超过实参个数,将实参依次传形参,如果形参没有与实参匹配的值,那么形参的值默认为undefined
+    function sum2(a,b,c,d) {
+        var  rs = a + b + c + d
+        //
+        console.log('rs is:',rs)
+    }
+    //rs is: NaN
+    sum2(10,20,30);
+
+    //注意:为了避免与前面的代码拼接在一起,最好在该函数前加上一个分号;
+    ;(function (a,b) {
+        let result = a + b
+        alert('立即执行函数IIFE'+ result)
+    })(1,2);
+
+
+</script>
+</html>

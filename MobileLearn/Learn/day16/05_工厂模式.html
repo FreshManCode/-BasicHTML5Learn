@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_工厂模式</title>
+</head>
+<body>
+
+</body>
+<script>
+    //工厂模式:成批创建相似对象
+    //传统方式创建
+    var  obj1 = new Object({
+        name:"libai",
+        age : '1280',
+    })
+    var  obj2 = new Object({
+        name:"wangwei",
+        age : '1270',
+    })
+    console.log(obj1,obj2)
+
+    //传统创建相似对象的缺陷:代码重复率太高
+
+    //2.工厂模式创建对象
+    function createObj(name,age) {
+        var  obj = new  Object();
+        obj.name = name
+        obj.age  = age
+        obj.fn = function () {
+            return this.name + this.age
+        }
+        return obj
+    }
+
+    var obj3 = createObj('挣钱','努力挣钱')
+    var obj4 = createObj('我要挣钱','我要努力挣钱')
+
+    console.log(obj3,obj4)
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15_径向渐变</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            /*background:radial-gradient(red,green,blue);*/
+            /*background:radial-gradient(circle,red,green,blue);*/
+            /*background:radial-gradient(circle closest-corner at 25% 75%,red,green,blue);*/
+            /*background:radial-gradient(circle farthest-corner at 25% 75%,red,green,blue);*/
+            background-image:-webkit-radial-gradient(circle farthest-corner at 25% 75% ,red,green,blue);
+            background-image: radial-gradient(circle farthest-corner at 25% 75% ,red,green,blue);
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            /*border: 1px solid #5a270b;*/
+            margin: 0 auto;
+            background: radial-gradient(at 35px  65px,#fff,#ccc,#fff);
+            background: -webkit-radial-gradient(at 35px 65px,#fff,#ccc,#fff);
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box">
+
+</div>
+<div class="box1">
+
+</div>
+</body>
+</html>

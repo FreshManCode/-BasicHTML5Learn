@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_unicode编码和解码</title>
+</head>
+<body>
+
+</body>
+<script>
+    var  str = '我是前端开发工程师哈哈,id=1212212';
+    console.log(str)
+
+    //unicode编码
+    let encodeStr = encodeURIComponent(str)
+    console.log(encodeStr)
+
+    //unicode解码
+    console.log(decodeURIComponent(encodeStr))
+
+
+    //03_eval
+    var  x = 'Tom'
+    var  str  = '他的名字叫:x'
+    //eval('')方法自含有一对引号,它中间包含的是一段JS代码,这里的eval()的作用是
+    //将这段的JS代码解析出来
+    var  str1 =  eval("'他的名字叫:'+ x")
+    var  str1 =  eval("'他的名字叫:'+ x")
+    console.log(str,'\n',str1)
+</script>
+</html>

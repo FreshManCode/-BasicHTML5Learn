@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFC规范</title>
+    <style>
+        /*1. IFC的元素会在一行中从左至右排列 */
+        span,strong {
+            font-size: 30px;
+            background-color: #f4ff57;
+
+            /* 行级标签不识别宽高 */
+            width: 200px;
+            /* 如果要让行级标签识别宽高,必须用display把它设置成块级标签 */
+            /*display: inline-block;*/
+        }
+        strong {
+            font-size: 18px;
+            background-color: #ffadf5;
+            vertical-align: top;
+        }
+
+        .box {
+            float: left;
+            font-size:50px ;
+        }
+        div {
+            /* 转换为行级(内联)标签 */
+            display: inline;
+        }
+
+    </style>
+</head>
+<body>
+    <span>
+        span
+    </span>
+    <strong>
+        strong
+    </strong>
+    <em class="box">
+        box
+    </em>
+    <div>
+        div
+    </div>
+
+</body>
+</html>

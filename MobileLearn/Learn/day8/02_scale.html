@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_scale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            margin: 200px auto;
+
+            /*-webkit-transform:scale(2,.5) ;*/
+            /*-moz-transform:scale(2,.5) ;*/
+            /*-ms-transform:scale(2,.5) ;*/
+
+            /* x轴和y轴都放大1.5倍
+            scaleX|scaleY 仅仅对某一方向进行相关缩放,另个方向不变
+             */
+            -webkit-transform:scale(1.5) ;
+            -moz-transform:scale(1.5) ;
+            -ms-transform:scale(1.5) ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_作用域</title>
+</head>
+<body>
+<script>
+    console.log(x)
+    //var定义的变量存在位置变量提升,该变量默认值为undefined
+    var x = 123; //这里的x是一个全局变量
+    function fn1() {
+        //在函数内部定义的y局部变量
+        var y = 10
+        console.log(x,y)
+    }
+    function fn2() {
+        console.log(x + 10)
+    }
+    fn1();
+    fn2();
+
+    //y是函数内部的局部变量,无法引用到
+    console.log(y)
+</script>
+
+</body>
+</html>

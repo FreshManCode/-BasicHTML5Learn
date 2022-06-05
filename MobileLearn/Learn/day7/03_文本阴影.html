@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_文本阴影</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        h1 {
+            text-shadow: 2px 3px 5px yellow;
+        }
+        h3 {
+            color: red;
+        }
+
+        p {
+            color: white;
+        }
+        .p1 {
+            width: 200px;
+            border: 1px solid lightgrey;
+            word-wrap: normal;
+            -ms-word-wrap: normal;
+            color: white;
+        }
+        .p2 {
+            width: 200px;
+            border: 1px solid lightgrey;
+            word-wrap: break-word;
+            -ms-word-wrap: break-word;
+            color: white;
+        }
+
+    /*  3.单词拆分  */
+        .test {
+            -ms-word-break:break-all;
+            word-break:break-all ;
+            color: white;
+            width: 200px;
+            border: 1px solid lightgrey;
+        }
+    </style>
+</head>
+<body>
+<h1>这是文本阴影测试</h1>
+<p class="p1">
+    This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;
+    This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;
+    ThisparagraphcontainsaverylongThisparagraphcontainsaverylongThisparagraphcontainsaverylongThis paragraph contains a very long word;;
+</p>
+<p>注意上下文的区别哦</p>
+<p class="p2">
+    This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;
+    This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;
+    ThisparagraphcontainsaverylongThisparagraphcontainsaverylongThisparagraphcontainsaverylongThis paragraph contains a very long word;;
+</p>
+
+<!-- 单词拆分 -->
+<h3>3.单词拆分</h3>
+<p class="test">
+    This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;
+    This paragraph contains a very long word;This paragraph contains a very long word;This paragraph contains a very long word;
+    ThisparagraphcontainsaverylongThisparagraphcontainsaverylongThisparagraphcontainsaverylongThis paragraph contains a very long word;;
+</p>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_媒体查询2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .menu {
+            overflow: hidden;
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+        }
+        li {
+            list-style-type: none;
+            float: left;
+            width: 20%;
+            text-align: center;
+            background-color: #1122ff;
+        }
+        a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        /* 媒介查询2 */
+        @media screen and (max-width: 480px) {
+            .menu {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li><a href="#">菜单项1</a></li>
+    <li><a href="#">菜单项2</a></li>
+    <li><a href="#">菜单项3</a></li>
+    <li><a href="#">菜单项4</a></li>
+    <li><a href="#">菜单项5</a></li>
+</ul>
+
+</body>
+</html>

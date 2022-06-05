@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_关键帧动画</title>
+    <style>
+        .box {
+            width: 60%;
+            height: 800px;
+            margin: auto;
+            border: 1px solid #cccccc;
+            position: relative;
+        }
+        .demo {
+            margin-top: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            position: absolute;
+            /*让谁开始动画,定义的关键帧,name  */
+            animation: move 3s ease-in-out 2  alternate;
+        }
+        .circle {
+            margin-top: 180px;
+            width: 100px;
+            height: 100px;
+            background: url(../static/img/icon.png) no-repeat;
+            position: absolute;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            /*定义旋转动画,起始的时候不旋转,鼠标悬浮在circle上时开启动画旋转  */
+            animation: rotate 1.5s linear infinite  normal;
+            animation-play-state: paused;
+        }
+        .circle p {
+            margin-top: 42px;
+            font-size: 12px;
+            color: #999999;
+            width: 100px;
+            text-align: center;
+        }
+
+    /*   定义关键帧 name为move  */
+        @keyframes move {
+            0% {
+                left: 100px;
+            }
+            100% {
+                left: 500px;
+                background-color: #00ff00;
+            }
+        }
+        @-webkit-keyframes move {
+            0% {
+                left: 100px;
+            }
+            20% {
+                left: 140px;
+                background-color: #ff00ff;
+            }
+            100% {
+                left: 300px;
+                background-color: #00ff00;
+            }
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        /* 悬停在Hover上,处理.box .demo 相关功能 */
+        .running:hover+.box .demo {
+            animation-play-state: running;
+        }
+
+        .stop:hover+.box .demo {
+            animation-play-state: paused;
+        }
+        .rotate:hover+.box .circle {
+            animation-play-state: running;
+        }
+
+    </style>
+</head>
+<body>
+<button class="running">
+    running
+</button>
+<button class="stop">
+    stop
+</button>
+<button class="rotate">
+    rotate
+</button>
+   <div class="box">
+       <div class="demo">
+
+       </div>
+       <div class="circle">
+           <p>旋转哈哈</p>
+       </div>
+   </div>
+
+</body>
+</html>

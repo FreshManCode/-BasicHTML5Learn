@@ -1,0 +1,71 @@
+.bannerWrapper {
+    overflow: hidden;
+    height: 400px;
+
+    padding-bottom: 10px;
+    background-color: #ffffff;
+    position: relative;
+}
+.bannerWrapper .bannerContainer {
+    width:9600px;
+    height:400px;
+}
+.bannerContainer  .bannerImage  img{
+    width: 1920px;
+    height: 390px;
+    float: left;
+}
+
+.pageControl {
+    position: absolute;
+    top: 380px;
+    width:60px;
+    margin-left: 950px;
+}
+.pageControl ul li {
+    list-style-type: none;
+    float: left;
+    margin: 0 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+.pageControl ul .active {
+    background-color: #01a1ff;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    border-radius: 50%;
+}
+
+/* 左右翻页*/
+
+.bannerWrapper .basePage {
+    position: absolute;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+}
+
+.bannerWrapper  .pre {
+    left: 20px;
+    background: url("../../file/imgs/index-xb2.png") no-repeat;
+}
+.bannerWrapper  .pre:hover {
+    background: url("../../file/imgs/index-xb4.png") no-repeat;
+}
+
+.bannerWrapper .next {
+    right: 20px;
+    background: url("../../file/imgs/index-xb1.png") no-repeat;
+}
+
+.bannerWrapper .next:hover {
+    background: url("../../file/imgs/index-xb3.png") no-repeat;
+}
+
+
+

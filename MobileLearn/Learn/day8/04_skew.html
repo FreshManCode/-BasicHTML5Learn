@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_skew</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            margin: 100px auto;
+
+            /*扭曲 */
+            /*-webkit-transform:skew(330deg,50deg);*/
+            /*-moz-transform: skew(330deg,50deg);*/
+            /*-ms-transform:skew(330deg,50deg);*/
+            /*transform:skew(330deg,50deg);*/
+
+            /* 如果只带一个参数,只有X轴方向的扭曲*/
+            /*skewX|skewY 只在一个方向上生效 */
+            -webkit-transform:skew(230deg);
+            -moz-transform: skew(230deg);
+            -ms-transform:skew(230deg);
+            transform:skew(230deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+</html>

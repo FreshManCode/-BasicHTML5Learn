@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09_边框图片</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            /* 这样设置会导致在ios系统下,边框没有图片 */
+            /*border:10px solid transparent;*/
+            /* 注意相关设置,否则在ios系统下不生效 */
+            border-style: solid;
+            border-width: 10px;
+        }
+        .div1 {
+            -webkit-border-image:url("../static/img/download.png") 10 round ;
+            -moz-border-image:url("../static/img/download.png") 10 round;
+            border-image:url("../static/img/download.png") 10 round;
+        }
+        .div2 {
+            -webkit-border-image:url("../static/img/download.png") 10 stretch ;
+            -moz-border-image:url("../static/img/download.png") 10 stretch;
+            border-image:url("../static/img/download.png") 10 stretch;
+        }
+        .div3 {
+            -webkit-border-image:url("../static/img/download.png") 10 repeat ;
+            -moz-border-image:url("../static/img/download.png") 10 repeat;
+            border-image:url("../static/img/download.png") 10 repeat;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+
+    </div>
+    <div class="div2">
+
+    </div>
+    <div class="div3">
+
+    </div>
+
+</body>
+</html>

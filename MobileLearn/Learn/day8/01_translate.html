@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_translate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            margin: 100px auto;
+            /*!* 兼容苹果和谷歌 *!*/
+            /*-webkit-transform: translate(100px,200px);*/
+            /*!* 兼容火狐*!*/
+            /*-moz-transform: translate(100px,200px);*/
+            /*!*兼容IE*!*/
+            /*-ms-transform: translate(100px,200px);*/
+            /*transform:translate(100px,200px) ;*/
+
+            /* 如果只带一个参数,这个参数代表的是X方向唯一值,y方向位移为0 */
+            /*-webkit-transform: translate(200px);*/
+            /*-moz-transform: translate(200px);*/
+            /*-ms-transform: translate(200px);*/
+            /*transform:translate(200px);*/
+
+
+            /* 沿着X轴平移 */
+            -webkit-transform: translateX(-200px);
+            -moz-transform: translateX(-200px);
+            -ms-transform: translateX(-200px);
+            transform:translateX(-200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+</body>
+</html>

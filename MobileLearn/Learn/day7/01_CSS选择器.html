@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_CSS选择器</title>
+    <style>
+        /* 1.属性选择器 */
+        p[class] {
+            /*color: #f00;*/
+        }
+        p[class=content] {
+            /*color: yellow;*/
+        }
+        /* class属性值以content开头 */
+        p[class^=content] {
+
+        }
+        /* class属性以content结尾 */
+        p [class$=content] {
+
+        }
+        /* 属性值中包含有p的 */
+        p[class*=p] {
+
+        }
+
+    /*  2.结构性伪类   :root */
+    /*  2.1 :root 匹配html标签,与body选择器效果一样   */
+    /*    :root {*/
+    /*        background-color: #fdc7ff;*/
+    /*    }*/
+    /*    body {*/
+    /*        background-color: #fdc7ff;*/
+    /*    }*/
+
+    /*  2.2 子元素选择 匹配父元素中连续的子元素
+    :first-child :第一个子元素
+    :last-child :最后一个子元素
+    :nth-last-child(n) :倒数第n个子元素
+    :nth-child(n) :第n个子元素
+     */
+        p:first-child {
+            /*background-color: #f5f5f5;*/
+        }
+        /* 倒数第三个子元素*/
+        p:nth-last-child(3) {
+            /*color: blue;*/
+        }
+        /* 整数第二个子元素 */
+        p:nth-child(2) {
+            /*color: black;*/
+        }
+        /* 2n标识为2的倍数,2,4,6,8 */
+        p:nth-child(2n) {
+            /*color: pink;*/
+        }
+
+        /* 3n表示为3的倍数加1,4,7 */
+        p:nth-child(3n+1) {
+            /*color: darkblue;*/
+        }
+
+    /*  3.nth-of-type类:用于匹配父元素中兄弟子元素,可以用于子元素非连续的情况
+    :nth-of-type(n)
+    :nth-last-of-type(n)
+      */
+        p:nth-of-type(3) {
+            /* 寻找的是p标签中的第三个兄弟标签,如果第三个不是p标签,将跳过,继续往下查找,
+             直到找到为止。*/
+            color: #a55326
+        }
+        p:nth-child(3) {
+            /* 找第三个元素,如果是p标签,就找到了,如果不是,就是没找到,且不继续查找  */
+            color: #a55326
+        }
+
+        p:nth-last-of-type(4) {
+            /* 找的是p标签中倒数第4个兄弟p标签,如果第4个不是p标签,将跳过,
+             继续向前查找,直到找到为止。*/
+            color: #901e27;
+        }
+
+    /*  4. 其它
+    1.:only-child ->  父元素中仅有一个子元素
+    2.:only-of-type -> 父元素中仅有一个兄弟元素
+    3. :empty -> 没有任何元素,包含文本元素,即查找空元素
+      */
+
+        /* 查找父元素中只有的一个标签为p标签,不允许其它标签存在,但在
+        p标签中可以有子标签。
+         */
+        /*p:only-child {*/
+        /*    width: 200px;*/
+        /*    border: 1px solid #273d90;*/
+        /*    background-color: #fff000;*/
+        /*}*/
+
+        /* 选择父元素中p标签是唯一的子元素,可以有其它标签存在  */
+        p:only-of-type {
+            width: 200px;
+            border: 1px solid #273d90;
+            background-color: #fff000;
+        }
+
+        div:empty{
+            background-color: #ff593b;
+            width: 100px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <p class = 'content p1'>段落1</p>
+    <p class = 'content p2'>段落2</p>
+    <div class="box">div-box</div>
+    <p class = 'content'>段落3</p>
+    <p class = 'content p'>段落4</p>
+    <p class = 'content p5'>段落5</p>
+    <div>
+        <p>
+            ppppppp 标签只有一个
+        </p>
+    </div>
+    <div>
+        <p>
+            ppppppp标签只有一个
+            <span>span标签</span>
+        </p>
+    </div>
+    <div>
+        <p>
+            222222 p标签只有一个
+        </p>
+        <div>
+            div 标签
+        </div>
+    </div>
+    <div>
+        <p>
+            222222 p标签
+        </p>
+        <p>
+            pppp p标签
+        </p>
+    </div>
+
+    <div class="test"></div>
+</div>
+
+</body>
+</html>

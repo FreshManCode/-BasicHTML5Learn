@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS学习1</title>
+<!--  2.内部样式 一般写在head里面 type可以省略  -->
+    <style type="text/css">
+
+        /*4. 导入外部样式引入 必须要写在style标签内部*/
+        @import "style/test.css";
+
+        p {
+            background-color: red;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* 2.标签选择器*/
+
+        h3 {
+            text-align: center;
+        }
+
+        span {
+            display: block;
+            margin-left: 20px;
+            border: 1px solid red;
+        }
+
+        /*3.类选择器*/
+        .wrapper {
+            color: blue;
+        }
+
+        /*4. ID选择器*/
+        #wrapper_id {
+            padding: 40px;
+            border: 1px solid #f5f5f5;
+        }
+
+        #test {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 20px;
+            color: olive;
+        }
+
+
+        /*5. 派出选择器*/
+        .box2 li {
+            color: #ccff74;
+        }
+
+
+
+    </style>
+
+<!--  3.引入外部样式文件  -->
+<!--    link:css-->
+    <link rel="stylesheet" href="./style/style1.css">
+</head>
+<body>
+<div>
+<!-- 1.行间样式(嵌入式样式)   -->
+    <div style="color: olive;width: 100px;border: 1px solid blue">
+        行间样式测试1
+    </div>
+    <div>
+        行间样式测试2
+    </div>
+
+<!--  2.内部样式表  -->
+    <p>段落1</p>
+    <p>段落2</p>
+
+    <span>外部样式测试</span>
+    <span>外部样式测试</span>
+    <span>外部样式测试</span>
+
+<!--    .box{导入外部样式}*3-->
+    <div class="box">导入外部样式</div>
+    <div class="box">导入外部样式</div>
+    <div class="box">导入外部样式</div>
+
+    <em class="box">同学们好</em>
+</div>
+
+<!--CSS选择器分类-->
+<div>
+<!-- 2.标签选择器   -->
+    <div>
+        <h3>CSS选择器分类</h3>
+        <p>这是P标签</p>
+        <strong>这是strong标签</strong>
+    </div>
+
+<!--  3.类选择器  -->
+   <div class="wrapper">
+       这是DIV标签哦
+       <p class="wrapper">
+           这是DIV标签哦
+       </p>
+   </div>
+
+
+<!--  4.ID选择器  -->
+    <div id="wrapper_id">
+        <p id="test">
+            我是ID选择器改变的标签哦豁
+        </p>
+    </div>
+
+<!--  5.派出选择器  -->
+    <ul class="box1">
+        <li>li001</li>
+        <li>li002</li>
+        <li>li003</li>
+    </ul>
+
+    <ul class="box2">
+        <li>li001</li>
+        <li>li002</li>
+        <li>
+            <ul>
+                <li>00</li>
+                <li>01</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+</body>
+</html>

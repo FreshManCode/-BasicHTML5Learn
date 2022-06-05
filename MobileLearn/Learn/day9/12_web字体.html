@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_web字体</title>
+    <style>
+        @font-face {
+            /* 定义引入字体的名称 */
+            font-family: Awesome;
+            /* 引入外部字体 */
+            src: url("./file/font/fontawesome-webfont.ttf") format('truetype');
+        }
+        @font-face {
+            font-family: AwesomeEOT;
+            src: url("./file/font/fontawesome-webfont.eot");
+        }
+        p {
+            font:15px Awesome 微软雅黑 ;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<p>
+    因为IE8及IE8以下版本既不支持html5,也不支持CSS3 Media,所以我们需要加载JS文件来处理这个兼容。上面的代码是一个注释语句,也就是说,IE9及以上的版本不会编译这几行代码
+</p>
+
+</body>
+</html>

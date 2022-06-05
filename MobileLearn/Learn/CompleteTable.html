@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>完整表格</title>
+</head>
+<body>
+<!--table[border=1 align=center]>caption{学生信息表}+thead>tr>th*4-->
+<table border="1" align="center" cellspacing="0" cellpadding="2px">
+    <caption>学生信息表</caption>
+    <thead>
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>家庭住址</th>
+        <th>备注</th>
+    </tr>
+    </thead>
+<!--    (tbody>tr*3>td*4)+(tfoot>tr>td[colspan=1])-->
+    <tbody>
+    <tr>
+        <td>001</td>
+        <td>李白</td>
+        <td>唐代大诗人</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>002</td>
+        <td>王维</td>
+        <td>唐代大诗人</td>
+        <td>三好学生</td>
+    </tr>
+    <tr>
+        <td>003</td>
+        <td>杜甫</td>
+        <td>唐代大诗人</td>
+        <td>大诗人</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="1">附注:这是一个好表 合并一个</td>
+    </tr>
+    <tr>
+        <td colspan="4">附注:这是一个好表 全部合并单元格</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_Math对象</title>
+</head>
+<body>
+
+</body>
+<script>
+    //属性
+    console.log(Math.PI)
+    console.log(Math.E)
+
+    //方法
+    console.log('最小值'+Math.min(1,2,3,4,6))
+    console.log('最大值'+Math.max(1,2,3,4,6))
+
+    console.log('四舍五入:'+Math.round(3.54) ) //4
+    console.log('向上取整:'+Math.ceil(3.14) )  //4
+    console.log('向下取整:'+Math.floor(3.14) ) //3
+    //四舍五入可以保留指定位数小数,但结果为字符型数据
+    console.log('四舍五入字符型:'+3.1455926.toFixed(2) ) //3.15
+
+
+    //随机函数
+    console.log('随机函数:' + Math.random())
+    //random终端饿参数未随机种子
+    console.log('随机函数2:' + Math.random(2))
+
+    //输出[30,88] 之间的证书
+    console.log('[30,88]之间的随机数:',Math.ceil(Math.random() * 58 + 30))
+
+    //幂函数
+    console.log('2的3次方:'+ Math.pow(2,3))
+
+
+    //三角函数
+    console.log('sin 30度的值为:',Math.sin(30 * Math.PI/180 ))
+
+
+</script>
+</html>

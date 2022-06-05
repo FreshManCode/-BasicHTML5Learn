@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS字体</title>
+    <style type="text/css">
+        p{
+            font-size: 18px;
+            font-family: 微软雅黑;
+            /*文字倾斜 italic/normal/oblique*/
+            font-style: italic;
+            /*文字加粗(bold bolder比bold更粗)*/
+            font-weight: bold;
+            /*当前文字的1.5倍高度*/
+            line-height: 1.5;
+        }
+        p span {
+            font-weight: bolder;
+            color:#ff0000;
+        /*  color:#ff1299 不能简写为color:#f129   */
+        }
+        em {
+            /*  下划线*/
+            text-decoration: underline;
+        }
+
+        #transform1 {
+            /*首字符大写*/
+            text-transform: capitalize;
+        }
+
+        #transform2 {
+            /*全部大写*/
+            text-transform: uppercase;
+        }
+
+        #text-indent1 {
+            /*首行缩进20px*/
+            text-indent: 20px;
+        }
+
+        #text-indent2 {
+            /*缩进两个文字*/
+            text-indent: 2em;
+        }
+
+        .news {
+            font: italic small-caps bolder 18px/1.5 宋体;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <div>
+        <p>尊敬的会员，恭喜您通过基本资料审核。根据您申请的产品类型，<em>
+            文字修饰
+        </em>请您提交相关补充资料。
+            未通过原因：12222222222222222222222222222222222222222222</p>
+        <span>呵呵哒</span>
+
+        <p id="transform1">How are you</p>
+        <p id="transform2">How are you</p>
+
+        <div id="text-indent1">
+            <p>
+            <p>首行缩进20像素尊敬的会员，恭喜您通过基本资料审核。根据您申请的产品类型，尊敬的会员，</p><p>恭喜您通过基本资料审核。根据您申</p>的产品类型，尊敬的会员，恭喜您通过基本资料审核。根据您申请的产品类型，尊敬的会员，恭喜您通过基本资料审核。根据您申请的产品类型，尊敬的会员，恭喜您通过基本资料审核。根据您申请的产品类型，尊敬的会员，恭喜您通过基本资料审核。根据您申请的产品类型，
+            </p>
+            <p>请的产品类型，尊敬的会员，恭喜您通过基本资料审核。根据您申请</p>
+        </div>
+        <div id="text-indent2">
+            <p>首行缩进两个文字请您提交相关补充资料。请您提交相关补充资料。</p>
+            <p>请您提交相关补充资料。请您提交相关补充资料。请您提交相关补充资料</p>
+            <p>请您提交相关补充资料。请您提交相关补充资料。请您提交相关补充资料。</p>
+        </div>
+        <div class="news">
+            <strong>
+                中央军委政治部,Hello!&nbsp;how are you?
+                首行缩进两个文字请您提交相关补充资料。请您提交相关补充资料。首行缩进两个文字请您提交相关补充资料。请您提交相关补充资料。首行缩进两个文字请您提交相关补充资料。请您提交相关补充资料。
+            </strong>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

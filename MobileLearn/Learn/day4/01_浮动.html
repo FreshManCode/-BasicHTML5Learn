@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+
+    <style>
+        .wrapper {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+        }
+        .box1,.box2 {
+            width: 200px;
+            height: 150px;
+        }
+        .box1 {
+            background-color: #ff0000;
+        }
+        .box2 {
+            background-color: #217aff;
+        }
+
+        /*子组件使用了浮动布局,没有把这个盒子撑开*/
+        .floatWrapper,.floatWrapper1,.floatWrapper2,.floatWrapper3 {
+
+            width: 500px;
+            margin: 10px auto;
+            border: 1px solid blue;
+        }
+
+        .box3,.box4,.box5 {
+            width: 150px;
+            height: 120px;
+        }
+        .box3 {
+            background-color: pink;
+            float: left;
+        }
+        .box4 {
+            background-color:orange;
+            float: right;
+        }
+        .box5 {
+            background-color: #2c3cff;
+        }
+
+        /*清除浮动*/
+
+        .clear {
+            clear: both;
+        }
+
+        /*清除浮动方法二
+        在要清除浮动的父级添加样式:overflow:hidden
+        */
+
+        .floatWrapper2 {
+            overflow: hidden;
+        }
+
+        /*清除浮动方法三:找到父级,添加伪元素:after*/
+        .floatWrapper3:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <!--这里的div属于块级标签,会独占一行-->
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+
+    <div class="floatWrapper">
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+        <div class="box5">box5</div>
+    </div>
+
+<!--  清除浮动方法1  -->
+    <div class="floatWrapper1">
+        <div class="box3">box3_1</div>
+        <div class="box4">box4_1</div>
+<!--     清除浮动方法一:添加空标签 ,此时box5 会撑开相应的盒子  -->
+        <div class="clear"></div>
+        <div class="box5">box5_1</div>
+    </div>
+
+    <!--  清除浮动方法2  -->
+    <div class="floatWrapper2">
+        <div class="box3">box3_2</div>
+        <div class="box4">box4_2</div>
+    </div>
+    <div class="box5">box5_2</div>
+
+    <!--  清除浮动方法3  -->
+    <div class="floatWrapper3">
+        <div class="box3">box3_3</div>
+        <div class="box4">box4_3</div>
+    </div>
+    <div class="box5">box5_3</div>
+
+
+</div>
+
+
+</body>
+</html>

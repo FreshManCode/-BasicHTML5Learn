@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC规范</title>
+    <style>
+        h3 {
+            text-align: center;
+        }
+        /*1. 内部的盒子会在垂直方向上一个接一个的放置 */
+        /*.box1,.box2 {*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    border: 1px solid #000*/
+        /*}*/
+        /*2. 垂直方向上的距离由margin 的最大值决定,如果不想要margin值叠加,
+        需要将其变成一个独立的容器
+
+         */
+
+        /*.container {*/
+        /*    overflow: hidden;*/
+        /*    width: 100px;*/
+        /*    height: 100px;*/
+        /*    background-color: #f00;*/
+        /*}*/
+        /*.wrapper {*/
+        /*    overflow: hidden;*/
+        /*}*/
+        /*!* 复制快捷键 command + d *!*/
+        /*.box1 {*/
+        /*    height: 20px;*/
+        /*    margin: 10px 0;*/
+        /*    background-color: #0f0;*/
+        /*}*/
+        /*!*  *!*/
+        /*.box2 {*/
+        /*    height: 20px;*/
+        /*    margin: 20px 0;*/
+        /*    background-color: #00f;*/
+        /*}*/
+
+    /*  3.BFC的区域不会与float元素区域重叠   */
+    /*    .box1 {*/
+    /*        float: left;*/
+    /*        width: 200px;*/
+    /*        height: 100px;*/
+    /*        background-color: #61ff9c;*/
+    /*    }*/
+    /*    .box2 {*/
+    /*        overflow: hidden;*/
+    /*        height: 200px;*/
+    /*        background-color: #ff4f46;*/
+    /*    }*/
+
+    /*  4.计算BFC的高度时,浮动元素也参与计算  */
+        .box2 {
+            width: 100px;
+            height: 80px;
+            background-color: #ff9a45;
+            float: left;
+        }
+        /* 如果想让父级也被撑开,就必须把它设置成一个BFC */
+        .container {
+            width: 300px;
+            border: 1px solid #000000;
+            /* 不是BFC时,浮动元素不参与运算,注释该功能会别有洞天 */
+            overflow: hidden;
+        }
+
+
+        .box3,.box4,.box5,.box6 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000
+        }
+        .box3,.box5 {
+            margin: 20px 0px;
+            background-color: red;
+        }
+        .box4,.box6{
+            margin: 40px 0px;
+            background-color: blue;
+        }
+        .collapseWrapper {
+            margin-top: 15px;
+            overflow: hidden;
+            border: 1px solid #f2f2f2;
+        }
+        .collapse {
+            float: left;
+        }
+
+        .noCollapse {
+            margin-left: 20px;
+            float: left;
+        }
+
+        /*  垂直方向上的距离由margin 的最大值决定,如果不想要margin值叠加,
+        需要将其变成一个独立的容器对比即可 */
+        .div {
+            overflow: hidden;
+        }
+
+        /*
+            3.BFC的区域不会与float元素区域重叠
+        */
+        .bfc-float {
+            margin-top: 15px;
+            border: 1px solid #f2f2f2;
+        }
+        .box7 {
+                float: left;
+                width: 100px;
+                height: 80px;
+                background-color: #61ff9c;
+        }
+        .box8 {
+                overflow: hidden;
+                height: 100px;
+                background-color: #ff4f46;
+        }
+
+        /* 4.计算BFC的高度时,浮动元素也参与计算 */
+
+        .bfc-float-height {
+            margin-top: 20px;
+            overflow: hidden;
+            border: 1px solid pink;
+        }
+        .box9 {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+    /*   5.BFC就是页面上一个独立的容器,容器里面的元素不会影响到外面的元素*/
+        .noAutoHeight {
+            margin-top: 15px;
+            border: 1px solid blue;
+        }
+        .autoHeight {
+            margin-top: 15px;
+            border: 1px solid blue;
+            overflow: hidden;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="box1"></div>
+        </div>
+        <div class="box2"></div>
+    </div>
+
+<!-- 2.垂直方向上的距离会叠加,(距离塌陷)值由最大margin值决定 (如果不要叠加,就需要将该盒子变成一个独立的盒子)   -->
+    <div class="collapseWrapper">
+        <div class="collapse">
+            <h3>BFC会距离塌陷</h3>
+            <div class="box3">上下margin20px</div>
+            <div class="box4">上下margin40px</div>
+        </div>
+
+        <div class="noCollapse">
+            <h3>去除BFC的距离塌陷</h3>
+            <div class="box5">上下margin20px</div>
+            <div class="div">
+                <div class="box6">上下margin40px</div>
+            </div>
+        </div>
+    </div>
+
+<!--  3.BFC的区域不会与float元素区域重叠  -->
+    <div class="bfc-float">
+        <h3>3.BFC的区域不会与float元素区域重叠</h3>
+        <div class="box7"></div>
+        <div class="box8"></div>
+    </div>
+
+<!--  4.计算BFC的高度时,浮动元素也参与计算  -->
+
+    <div class="bfc-float-height">
+        <h3>4.计算BFC的高度时,浮动元素也参与计算</h3>
+        <div class="box7"></div>
+        <div class="box8"></div>
+        <div class="box9"></div>
+    </div>
+
+<!--  5.BFC就是页面上一个独立的容器,容器里面的元素不会影响到外面的元素   -->
+<!--  容器里面的元素不会影响到外面的元素,所以父级元素没有被撑开      -->
+    <h3>5.BFC就是页面上一个独立的容器,容器里面的元素不会影响到外面的元素</h3>
+    <div class="noAutoHeight">
+        <div class="box2">此时无法撑开父级元素</div>
+    </div>
+
+    <div class="autoHeight">
+        <div class="box2">此时可以撑开父级的高度</div>
+    </div>
+
+
+
+
+</body>
+</html>

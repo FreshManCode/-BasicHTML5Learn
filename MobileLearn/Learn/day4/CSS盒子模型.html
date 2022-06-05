@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        div .box1{
+            width: 800px;
+            height: 400px;
+            border: 1px solid red;
+        }
+        .span {
+            /*将span由行级标签转变为块级标签*/
+            /*display: block;*/
+            width: 300px;
+            height: 200px;
+            /*background-color: #f00;*/
+            /*margin: 10px;*/
+            /*margin: 10px 20px 30px;*/
+            display: inline-block;
+            /*padding: 20px;*/
+            border: 1px solid lightgray;
+        }
+        .txt {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+
+        }
+        .content {
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box1">
+        <div class="span">
+            <div class="txt">
+
+            </div>
+
+        </div>
+        <div class="content">
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

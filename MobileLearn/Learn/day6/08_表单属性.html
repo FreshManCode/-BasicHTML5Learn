@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_表单属性</title>
+</head>
+<body>
+<!--
+* 1.formaction:修改action数据提交的地方
+* 2.formenctype:修改表单请求的类型
+* 3.formmethod:修改数据提交的方法
+* 4.form:设置表单元素属于哪个表单
+* 5.novalidate:不验证
+-->
+<!--
+
+application/x-www-form-urlencoded :普通表单类型
+multipart/form-data :文件上传类型
+
+-->
+<form action="//baidu.com" enctype="multipart/form-data">
+    <input type="submit" formaction="//163.com">
+</form>
+
+
+<!--
+3. formmethod:修改数据提交的方法
+常用的提交方式有:get/post两种.他们的区别:
+    1.get 是以字节为单位提交,只接受ASCII. post是以字符为单位提交
+    2.get 是以明文方式,提交的数据会显示在地址栏中,一般不用来传输一些敏感的数据
+    因为传输的数据保留在外面,而post是暗文方式提交
+    3.get在浏览器中回退是无害的,而post会再次提交请求
+    4.get会被浏览器主动缓存,post不会,除非手动设置
+    5.get和post在传输字节上一般没有限制,个别浏览器会有,可以理解为,get一般不超过2k,
+    而post一般不超过2M
+
+ -->
+
+<!-- 默认是以get方式发送请求/提交数据 -->
+<form action="#" method="get">
+    <input type="text" name="username">
+    <input type="submit" formmethod="post">
+</form>
+
+<!-- 4.form:设置表单元素属于哪个表单 -->
+<form action="#" method="get" id="user-info">
+    <input type="text" name="username">
+    <input type="submit" value="设置表单元素属于哪个表单" formmethod="post">
+</form>
+<form action="#" method="get" id="student-info">
+    <input type="text" name="username">
+    <input type="submit" formmethod="post">
+</form>
+<input type="password" name="userPSW" placeholder="请输入密码" form="user-info">
+
+<!-- 5.novalidate:不验证 -->
+<form  action="#" method="get" id="no-validate" novalidate>
+    <input type="email" name="username">
+    <input type="submit" value="不验证提交" formmethod="post">
+</form>
+
+
+</body>
+</html>

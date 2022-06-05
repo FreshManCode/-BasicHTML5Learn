@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table中的colspan</title>
+</head>
+<body>
+
+<!--table[border=1 width=500 align=center]>tr*3>td{内容$$}*3-->
+
+<table border="1" width="500" align="center" cellspacing="0.0">
+    <tr>
+        <td>内容01</td>
+        <td colspan="2" align="center" >内容02</td>
+    </tr>
+    <tr>
+        <td>内容01</td>
+        <td>内容02</td>
+        <td>内容03</td>
+    </tr>
+    <tr align="right">
+        <!--    合并3列单元格    -->
+        <td colspan="3">内容03&nbsp;&nbsp;</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1" width="500" align="center" cellspacing="0.0">
+    <tr>
+        <td rowspan="2">内容01</td>
+        <td colspan="2"  align="center" >内容02</td>
+    </tr>
+    <tr>
+        <td>内容02</td>
+        <td>内容03</td>
+    </tr>
+    <tr align="right">
+        <!--    合并3列单元格    -->
+        <td colspan="3">内容03&nbsp;&nbsp;</td>
+    </tr>
+</table>
+</body>
+</html>

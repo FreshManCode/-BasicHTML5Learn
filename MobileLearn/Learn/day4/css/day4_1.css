@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    /* 内容区域一般不给出高度,高度由内容自行撑开 */
+    width: 800px;
+    border: 1px solid lightgray;
+    margin: 10px auto;
+    background-color: #f5f5f5;
+
+}
+/* 如果不清除浮动,页脚布局就会出问题,一定要注意*/
+.contentWrapper {
+    overflow: hidden;
+}
+
+
+.header {
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    background-color: #f5f5f5;
+}
+.leftMenu {
+    float: left;
+    width: 150px;
+    background-color: #f5f5f5;
+}
+ h4 {
+    margin-top: 30px;
+}
+
+.leftMenu ul {
+    margin-top: 15px;
+    margin-left: 25px;
+    font-size: 13px;
+}
+
+.leftMenu ul li a {
+    text-decoration: none;
+    color: #333333;
+    line-height: 1.5em;
+}
+
+.leftMenu ul li a:hover {
+    color: red;
+}
+
+
+.content {
+    padding: 15px 10px;
+    width: 480px;
+    float: left;
+    background-color: #ffffff;
+}
+.content h3 {
+    margin: 15px 0px;
+    font-family: 多体, 宋体;
+    font-weight: bolder;
+}
+
+
+.content p {
+    text-indent: 2em;
+    font-family: 微软雅黑;
+}
+
+.rightMenu {
+    float: right;
+    width: 150px;
+    background-color: #f5f5f5;
+}
+.rightMenu ul {
+    margin-top: 15px;
+    margin-left: 25px;
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.5em;
+}
+
+.bottom {
+    background-color: #f5f5f5;
+    height: 40px;
+    line-height: 40px;
+    /*手形指示器 (说明当前标签可以点击)*/
+    cursor: pointer;
+}
+
+
+

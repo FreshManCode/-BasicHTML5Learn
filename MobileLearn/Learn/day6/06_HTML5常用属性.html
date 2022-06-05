@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_HTML5常用属性</title>
+</head>
+<body>
+<!--contenteditable -->
+    <p contenteditable="true">
+        contenteditable
+    </p>
+<!--hidden -->
+    <div class="box" hidden>box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+
+<!-- data-* -->
+    <p data-id="001">这是内容</p>
+<!-- 4.multiple -->
+<select multiple  name="" id="">
+    <option value="1" >1</option>
+    <option value="2" >2</option>
+    <option value="3" >3</option>
+    <option value="4" >4</option>
+</select>
+<!-- 5. required  -->
+<form action="#">
+    <input type="text"   placeholder="用户名" required><br>
+    <input type="emial"  placeholder="用户名"><br>
+    <input type="submit" >
+</form>
+<br>
+
+<!--6. pattern:-->
+<form action="#">
+    <input type="text"   placeholder="用户名" pattern="[A-Za-z0-9]{4,6}"><br>
+    <input type="emial"  placeholder="用户名"><br>
+    <input type="submit" >
+</form>
+
+</body>
+</html>

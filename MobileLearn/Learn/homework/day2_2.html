@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第二天作业2</title>
+</head>
+<body>
+<style type="text/css">
+    .borderInput {
+        width: 200px;
+        height: 25px;
+        border: 1px solid lightgray;
+        margin: 5px;
+    }
+
+    .smallBorderInput {
+        width: 150px;
+        height: 22px;
+        border: 1px solid lightgray;
+        margin: 5px;
+    }
+
+    .myDiV {
+        margin: 10px 100px;
+        border: 1px solid yellow;
+        padding: 20px;
+    }
+
+    .marginInput {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+    }
+
+
+
+</style>
+<div>
+   <div class="myDiV">
+       <h2>表单信息</h2>
+       <form action="submit.php">
+           <label for="account">账号:</label>  <input class="borderInput" type="text" id="account" placeholder="请输入账号:">
+           <br>
+
+           <label for="mail">邮箱:</label> <input class="borderInput" type="text" id="mail" placeholder="请输入邮箱:">
+           <br>
+
+           <label for="password">密码:</label>  <input class="borderInput" type="password" id="password"  placeholder="请输入密码:">
+           <br>
+
+           <label>性别:</label><input class="marginInput" type="radio"  name="sex" checked>男
+           <input type="radio" name="sex" >女
+           <br>
+
+           <label class="baseInput" >技能:</label>
+           <input style="margin-top: 10px;margin-bottom: 5px" type="checkbox">html+css
+           <input type="checkbox">javascript
+           <input type="checkbox">php
+           <input type="checkbox">java
+           <br>
+           <label for="avatar">头像:</label><input  id="avatar"  class="marginInput" type="file">
+           <br>
+
+           <label for="address">现居地:</label>
+           <select id="address" style="margin-top: 5px;margin-bottom: 15px">
+               <option value="广东省" selected>广东省</option>
+               <option value="安徽省">安徽省</option>
+               <option value="上海市">上海市</option>
+               <option value="江苏省">江苏省</option>
+               <option value="浙江省">浙江省</option>
+           </select>
+           <select>
+               <option value="广州市" selected>广州市</option>
+               <option value="合肥市">合肥市</option>
+               <option value="上海市">上海市</option>
+               <option value="南京市">南京市</option>
+               <option value="杭州市">杭州市</option>
+           </select>
+           <select>
+               <option value="天河区" selected>天河区</option>
+               <option value="瑶海区">瑶海区</option>
+               <option value="浦东新区">浦东新区</option>
+               <option value="玄武区">玄武区</option>
+               <option value="武进区">武进区</option>
+           </select>
+           <br>
+
+           <label style="vertical-align: top">留言:</label>
+           <textarea   id="mark" name="mark"  style="width: 350px;height: 200px;margin-bottom: 10px" placeholder="请输入留言内容"  ></textarea>
+           <br>
+
+           <label for="imageCode" >验证码:</label>
+           <input class="smallBorderInput"  id="imageCode" type="text" placeholder="请输入验证码">
+           <img src="../static/img/imagecode.png" style="vertical-align: bottom;margin-bottom: 5px" width="120px" height="35px" alt="图像验证码">
+           <br>
+
+           <input style="margin-top: 10px" type="submit" value="提交">  <input type="reset" value="重置">
+
+       </form>
+   </div>
+</div>
+
+</body>
+</html>

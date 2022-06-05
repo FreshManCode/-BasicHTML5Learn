@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display属性</title>
+    <style>
+        .wrapper {
+            width: 600px;
+            margin: auto;
+        }
+        .baseDiv{
+            width: 200px;
+            height: 100px;
+            background-color: #ff0000;
+        }
+        .blackColor {
+            background-color: #999999;
+        }
+        /*让两个div成为行级标签,可以左右排列*/
+        .inlineBlock {
+            display: inline-block;
+        }
+
+        /*去除左右两个div之间的间隙*/
+        .marginRight {
+            margin-right: -6px;
+        }
+        /*对于行级标签直接设置宽高是不生效的,使用inline-block转换为块级标签,直接平铺,不换行 */
+        .span1 {
+            display:inline-block ;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+        }
+
+        /*对于行级标签使用block之后,可以将其作为块级标签使用,并可以设置宽高*/
+        .span2 {
+            display: block;
+            width: 100px;
+            height: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .span3 {
+            width: 100px;
+            height: 20px;
+            background-color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="nonBlock">
+        <div class="baseDiv" ></div>
+        <div class="baseDiv blackColor"></div>
+    </div>
+    <div class="inlineBlock">
+        <div class="baseDiv inlineBlock"></div>
+        <div class="baseDiv blackColor inlineBlock"></div>
+    </div>
+
+    <div class="inlineBlock">
+        <div class="baseDiv inlineBlock marginRight"></div>
+        <div class="baseDiv blackColor inlineBlock"></div>
+    </div>
+
+    <span class="span1">
+        span1
+    </span>
+
+    <span class="span2">
+        span2
+    </span>
+    <span class="span3">
+        span3
+    </span>
+</div>
+
+
+</body>
+</html>

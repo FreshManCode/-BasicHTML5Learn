@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13_iconfont</title>
+<!--  两种引入iconfont 字体css资源文件的方式,一种下载到本地,一种使用在线地址直接加载  -->
+<!--    <link rel="stylesheet" href="./file/iconfont/css/iconfont.css">-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3431612_tm0b1h0k7jn.css">
+    <style>
+        li {
+            list-style-type: none;
+        }
+        button span {
+            color: blue;
+        }
+
+        .unicodeDiv {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <button class="upload">
+<!--      通过修改span字体的大小来修改iconfont字体图标的大小   -->
+        <span style="font-size: 44px;" class="iconfont icon-shangchuan-icon-copy"></span>
+    </button>
+
+    <ul>
+        <li ><span class="iconfont icon-yanjing"></span>列表内容1</li>
+        <li ><span class="iconfont icon-yanjing"></span>列表内容2</li>
+        <li ><span class="iconfont icon-yanjing"></span>列表内容3</li>
+        <li ><span class="iconfont icon-yanjing"></span>列表内容4</li>
+    </ul>
+
+<div class="unicodeDiv">
+<!--  通过unicode方式引入,class一定要是iconfont 否则不成效  -->
+    <span class="iconfont">&#xe760;</span>
+</div>
+
+
+</body>
+</html>

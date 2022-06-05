@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table样式</title>
+    <style>
+        table {
+            /*变成单线边框*/
+            border-collapse: collapse;
+            /*表格居中*/
+            margin: 0 auto;
+            width: 500px;
+            height: 120px;
+            text-align: center;
+        }
+        table td {
+            border: 1px solid #666666;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+
+        .listContainer {
+            margin: 20px 0px 10px;
+        }
+
+    /*   无序 列表样式*/
+        ul  {
+            /*实心矩形*/
+            /*list-style-type: square;*/
+            list-style: circle;
+            /* 取消相关样式*/
+            /*list-style: none;*/
+
+            /*list-style-position: inside;*/
+
+            list-style: url("../static/img/download.png");
+
+        }
+
+        /* 有序列表样式 */
+        ol {
+            /*decimal  默认值  decimal-leading-zero; 补0*/
+            list-style-type: upper-alpha;
+        }
+
+
+        dd {
+            margin-left: -2px;
+        }
+
+        dt {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<table >
+    <tr>
+        <td>具体内容1</td>
+        <td>具体内容2</td>
+        <td>具体内容3</td>
+        <td>具体内容4</td>
+    </tr>
+    <tr>
+        <td>具体内容1</td>
+        <td>具体内容2</td>
+        <td>具体内容3</td>
+        <td>具体内容4</td>
+    </tr>
+    <tr>
+        <td>具体内容1</td>
+        <td>具体内容2</td>
+        <td>具体内容3</td>
+        <td>具体内容4</td>
+    </tr>
+</table>
+
+<div class="listContainer">
+    <h3>
+        列表样式
+    </h3>
+    <ul>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+        <li>列表项4</li>
+    </ul>
+
+    <ol>
+        <li>列表项1</li>
+        <li>列表项2</li>
+        <li>列表项3</li>
+        <li>列表项4</li>
+    </ol>
+
+
+    <dl>
+        <dd>欢迎来到女儿国</dd>
+        <dt>我们这里有美女</dt>
+        <dt>我们这里有美酒</dt>
+        <dt>我们这里有美食</dt>
+    </dl>
+
+
+</div>
+
+</body>
+</html>

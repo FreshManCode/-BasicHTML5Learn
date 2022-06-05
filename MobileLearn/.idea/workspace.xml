@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="28MyZ6MUc9tgeBfWUPRNlWO2cbj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Learn/day11/file/imgs" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Learn/day11/public/css" />
+      <recent name="$PROJECT_DIR$/Learn/day10/file/SVG" />
+      <recent name="$PROJECT_DIR$/Learn/day10" />
+      <recent name="$PROJECT_DIR$/Learn/day9/file/iconfont/css" />
+      <recent name="$PROJECT_DIR$/Learn/day9/file/iconfont/fonts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Learn/day11/file/imgs" />
+      <recent name="$PROJECT_DIR$/Learn/day10/file" />
+      <recent name="$PROJECT_DIR$/Learn/homework/file/day9/fonts" />
+      <recent name="$PROJECT_DIR$/Learn/homework/file/day9/imgs" />
+      <recent name="$PROJECT_DIR$/Learn/day9/file/iconfont" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="圣杯布局.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MobileLearn/Learn/day5/圣杯布局.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.圣杯布局.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="" />
+      <created>1651040801193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651040801193</updated>
+      <workItem from="1651040802333" duration="8925000" />
+      <workItem from="1651719980509" duration="19760000" />
+      <workItem from="1652060460318" duration="26522000" />
+      <workItem from="1652511553429" duration="6715000" />
+      <workItem from="1652614503505" duration="2555000" />
+      <workItem from="1652663767470" duration="47858000" />
+      <workItem from="1653094712941" duration="30691000" />
+      <workItem from="1653394468939" duration="21413000" />
+      <workItem from="1653617145459" duration="11059000" />
+      <workItem from="1653834918122" duration="36361000" />
+      <workItem from="1654065199775" duration="8985000" />
+      <workItem from="1654142601052" duration="18644000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="441" y="196" key="#Notifications" timestamp="1651199294895">
+      <screen x="0" y="25" width="1680" height="958" />
+    </state>
+    <state x="441" y="196" key="#Notifications/0.25.1680.958@0.25.1680.958" timestamp="1651199294895" />
+    <state x="609" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1652319813450">
+      <screen x="0" y="25" width="1680" height="965" />
+    </state>
+    <state x="609" y="149" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.959@0.25.1680.959" timestamp="1651217719939" />
+    <state x="609" y="150" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.965@0.25.1680.965" timestamp="1652319813450" />
+    <state x="1018" y="330" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1653725027416">
+      <screen x="0" y="25" width="1680" height="964" />
+    </state>
+    <state x="1065" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1680.949@0.25.1680.949" timestamp="1651801141964" />
+    <state x="1065" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1680.951@0.25.1680.951" timestamp="1653313175294" />
+    <state x="1018" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1680.953@0.25.1680.953" timestamp="1653574332543" />
+    <state x="1018" y="330" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1680.964@0.25.1680.964" timestamp="1653725027416" />
+    <state x="411" y="204" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1651199288365">
+      <screen x="0" y="25" width="1680" height="958" />
+    </state>
+    <state x="411" y="204" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.25.1680.958@0.25.1680.958" timestamp="1651199288365" />
+    <state x="1184" y="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1653967097318">
+      <screen x="0" y="25" width="1680" height="969" />
+    </state>
+    <state x="1184" y="301" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1680.969@0.25.1680.969" timestamp="1653967097318" />
+    <state x="698" y="114" key="SettingsEditor" timestamp="1651802124492">
+      <screen x="0" y="25" width="1680" height="949" />
+    </state>
+    <state x="698" y="114" key="SettingsEditor/0.25.1680.949@0.25.1680.949" timestamp="1651802124492" />
+    <state x="698" y="116" key="SettingsEditor/0.25.1680.965@0.25.1680.965" timestamp="1651116948539" />
+    <state x="830" y="247" width="674" height="496" key="find.popup" timestamp="1653729165343">
+      <screen x="0" y="25" width="1680" height="958" />
+    </state>
+    <state x="830" y="243" width="674" height="486" key="find.popup/0.25.1680.940@0.25.1680.940" timestamp="1653288947730" />
+    <state x="830" y="244" width="674" height="486" key="find.popup/0.25.1680.945@0.25.1680.945" timestamp="1653283047111" />
+    <state x="830" y="245" width="674" height="486" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1651895900997" />
+    <state x="830" y="245" width="674" height="488" key="find.popup/0.25.1680.951@0.25.1680.951" timestamp="1652781556939" />
+    <state x="830" y="247" width="674" height="496" key="find.popup/0.25.1680.958@0.25.1680.958" timestamp="1653729165343" />
+    <state x="437" y="209" key="run.anything.popup" timestamp="1652523835740">
+      <screen x="0" y="25" width="1680" height="940" />
+    </state>
+    <state x="437" y="209" key="run.anything.popup/0.25.1680.940@0.25.1680.940" timestamp="1652523835740" />
+    <state x="718" y="304" width="670" height="691" key="search.everywhere.popup" timestamp="1654416658779">
+      <screen x="0" y="25" width="1680" height="969" />
+    </state>
+    <state x="718" y="295" width="670" height="671" key="search.everywhere.popup/0.25.1680.940@0.25.1680.940" timestamp="1652691527090" />
+    <state x="718" y="296" width="670" height="673" key="search.everywhere.popup/0.25.1680.942@0.25.1680.942" timestamp="1652762268301" />
+    <state x="718" y="298" width="670" height="676" key="search.everywhere.popup/0.25.1680.949@0.25.1680.949" timestamp="1652781816833" />
+    <state x="718" y="299" width="670" height="680" key="search.everywhere.popup/0.25.1680.951@0.25.1680.951" timestamp="1652779898778" />
+    <state x="718" y="300" width="670" height="681" key="search.everywhere.popup/0.25.1680.956@0.25.1680.956" timestamp="1651909884755" />
+    <state x="718" y="301" width="670" height="685" key="search.everywhere.popup/0.25.1680.960@0.25.1680.960" timestamp="1652347697236" />
+    <state x="718" y="302" width="670" height="687" key="search.everywhere.popup/0.25.1680.964@0.25.1680.964" timestamp="1652318837712" />
+    <state x="718" y="304" width="670" height="691" key="search.everywhere.popup/0.25.1680.969@0.25.1680.969" timestamp="1654416658779" />
+  </component>
+</project>

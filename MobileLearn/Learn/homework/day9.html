@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day9</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        @font-face {
+            font-family: BeBAS;
+            src: url("./file/day9/fonts/BEBAS___.ttf");
+        }
+        @font-face {
+            font-family: economica;
+            src: url("./file/day9/fonts/DroidSans-Bold.ttf") format('OpenType');
+        }
+        @font-face {
+            font-family: kaushanscript;
+            src: url("./file/day9/fonts/KaushanScript-Regular.otf") format('OpenType');
+        }
+
+
+        .wrapper {
+            margin: 0 auto;
+            min-width: 880px;
+        }
+        .bannerWrapper {
+            background:url("./file/day9/imgs/ambitios_header_bg.gif"),no-repeat,center top;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+        .nav {
+            display: flex;
+        }
+        .nav h3 {
+            padding:10px;
+            color: #ffffff;
+            font: 24px economica;
+            flex: 1;
+            /*文字阴影*/
+            text-shadow: 3px 3px 5px #cccccc;
+        }
+        .nav .navContainer {
+            flex: 4;
+        }
+        .nav ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav ul li {
+            padding: 12px 10px;
+            list-style-type: none;
+            /*首字母大写*/
+            text-transform: capitalize;
+        }
+        .nav ul li a {
+            padding: 5px;
+            text-decoration: none;
+            color:#ffffff;
+            font-size: 14px;
+        }
+        .nav ul li a:hover {
+            background-color: #ffffff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            color: #666666;
+        }
+
+        .topContent {
+            background: url("./file/day9/imgs/ambitios_first_row_bg.gif") no-repeat;
+            display: flex;
+            padding: 50px 10px;
+        }
+        .floatImage {
+            flex: 1 1;
+            margin-right: 10px;
+            padding: 10px;
+        }
+
+        .floatImage img {
+            height: 300px;
+            box-shadow: 0 10px 10px #cccccc;
+        }
+
+
+        .floatTextButton {
+            position: relative;
+            flex: 1 1;
+            margin-left: 10px;
+            padding-right: 10px;
+            height: 300px;
+        }
+        .floatTextButton .text h3 {
+            margin-bottom: 15px;
+            color: #ffffff;
+            font:normal 24px kaushanscript;
+        }
+        .floatTextButton .text h3:first-child {
+            margin-top: 10px;
+        }
+
+        .floatTextButton .text p {
+            color: #ffffff;
+            font:13px 微软雅黑;
+            line-height: 1.5em;
+            margin: 8px 0;
+        }
+        .floatTextButton .rightArrow {
+            position: absolute;
+            top: 258px;
+            width: 120px;
+            background-color: #f5f5f5;
+            padding: 8px 20px 8px 8px;
+            display: flex;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px #cccccc;
+        }
+        .rightArrow img {
+            width: 30px;
+            height: 30px;
+        }
+        .rightArrow span {
+            margin-left: 10px;
+            display: block;
+            width: 60px;
+            color: #333333;
+            font-size: 13px;
+        }
+
+        .columnWrapper {
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .columnDiv {
+            padding: 0 10px;
+            width: 100%;
+        }
+        .columnDiv:first-child {
+            padding-left: 0;
+        }
+        .columnDiv:last-child {
+            padding-right: 0;
+        }
+        .columnDiv .content {
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px #cccccc;
+            background-color: #f5f5f5;
+            overflow: hidden;
+            font-size: 13px;
+            color: #666666;
+            min-height: 400px;
+            padding-bottom: 40px;
+        }
+        .columnDiv .content .header {
+            padding: 10px;
+            color: #ffffff;
+            font-size: 28px;
+            background: linear-gradient(to bottom,rgb(102,167,217),rgb(20,98,165)) ;
+            height: 145px;
+            text-align: center;
+            vertical-align: middle;
+            font-family: "PingFang HK";
+        }
+
+        .columnDiv .content p {
+            margin: 20px 10px 0 10px;
+        }
+        .columnDiv .content ul li {
+            list-style: inside;
+            line-height: 2.0em;
+            margin: 0 10px
+        }
+
+        /*底部footer*/
+        .footer {
+            padding: 10px;
+            background: url(./file/day9/imgs/ambitios_footer_bg.gif) no-repeat;
+        }
+        .footer p {
+            padding-top: 10px;
+            padding-bottom: 15px;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="bannerWrapper">
+        <div class="nav">
+            <h3>AMBITIOUS</h3>
+            <div class="navContainer">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="topContent">
+        <div class="floatImage">
+            <img src="./file/day9/imgs/ambitios_pic1.png" alt="pic1">
+        </div>
+        <div class="floatTextButton">
+            <div class="text">
+                <h3>Women Prefer</h3>
+                <h3>Pastel Colored Flowers</h3>
+                <p>Pastel Colored Flowers
+                    Flowers were used to signal meanings in the time when social meetings between men and women was difficult. Lilies make people think of life.
+                    Red roses make people think of love, beauty, and passion.</p>
+                <p>
+                    Everyone love flowers, but some just don't know that they do.
+                </p>
+            </div>
+            <div class="rightArrow">
+                <a href="#"><img src="./file/day9/imgs/ambitios_button3_bgs1.png" alt="箭头"></a>
+                <span>open up now</span>
+            </div>
+        </div>
+    </div>
+    <div class="columnWrapper">
+        <div class="columnDiv">
+            <div class="content">
+                <div class="header">
+                    Wide Range Of Header Sliders
+                </div>
+                <p>
+                    We already have 3 absolutely different sliders, such as:
+                </p>
+                <ul>
+                    <li>Simple but stylish JCycle</li>
+                    <li>Famous 3d slider</li>
+                    <li>Carousel slider</li>
+                </ul>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus condimentum, massa eu
+                </p>
+
+            </div>
+        </div>
+        <div class="columnDiv">
+            <div class="content">
+                <div class="header">
+                    Variety Of
+                    Portfolio
+                    Layouts
+                </div>
+                <p>Currently we have 3 portolfio layouts.<p>
+                <p>Simple image gallery, that is perfect for photos.</p>
+                <p> Big image preview with description, perfect for designers to show their works in all beauty.</p>
+                <p> Medium layout is good for mixed content, such as: video, images, and etc. in one gallery.</p>
+
+            </div>
+        </div>
+        <div class="columnDiv">
+            <div class="content">
+                <div class="header">
+                    Theme That Really
+                    Meets Your
+                    Requirements
+                </div>
+                <p>
+                    Ambitious perfect for almost any kind of websites.
+                </p>
+                <p>
+                    Soft, clean, friendly design of this theme, won't leave your website visitors indifferent.
+                </p>
+                <p>
+                    This theme has no face, you can make it unrecognizable but still amazing, no one will blame you for template :P
+                </p>
+
+            </div>
+        </div>
+        <div class="columnDiv">
+            <div class="content">
+                <div class="header">
+                    Lovely
+                    Theme Colors
+                </div>
+                <p>
+                    This Theme comes with 11 different color variations and will have more in our upcoming updates.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus condimentum, massa eu accumsan pellentesque, felis metus imperdiet est.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2013 Seeking knowledge school. All rights reserved.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

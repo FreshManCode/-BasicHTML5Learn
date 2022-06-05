@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day6</title>
+<!--  引入外部字体  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Belgrano">
+    <style>
+        body {
+            /*引入的字体*/
+            font-family: Belgrano, serif;
+        }
+        img ,a,audio,video {
+            border: 0;
+            outline: none;
+        }
+        .wrapper {
+            overflow: hidden;
+            width: 1000px;
+            margin: 10px auto;
+            background-color: #a55326;
+            opacity: 0.7;
+        }
+        .leftBar {
+            float: left;
+            width: 300px;
+            /*height: 600px;*/
+        }
+        .foodImage {
+
+        }
+        .foodImage img {
+            width: 150px;
+            height: 150px;
+            margin: 10px 0 0 20px;
+        }
+        .describeText {
+            text-align: center;
+        }
+
+        .describeText p {
+            font-size: 22px;
+            color: yellow;
+            text-shadow: 1px 1px 1px #ffffff;
+            /*font-family: italic;*/
+        }
+        .describeText p:first-child {
+            color: black;
+        }
+        .leftBar audio {
+            margin: 0 10px;
+            width: 280px;
+            height: 30px;
+        }
+
+        .right {
+            float: left;
+            width: 680px;
+            overflow: hidden;
+        }
+        .topImage {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 0 0 30px 0;
+        }
+        .topImage img {
+            width: 100%;
+            height: auto;
+        }
+
+        .bottomVideo {
+            overflow: hidden;
+            margin: 0px;
+            padding: 0px;
+        }
+        .smallVideo {
+            float: left;
+            width: 28%;
+            margin: 0 4% 0 0 ;
+            overflow: hidden;
+
+        }
+        .smallVideo p {
+            font-family: italic;
+            color: yellow;
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0px;
+        }
+        .smallVideo video {
+            width: 98%;
+            height: 200px;
+        }
+        .smallVideo .small-describe {
+            font-size: 13px;
+            color: #f5f5f5;
+
+        }
+        .smallVideo .time {
+            margin: 5px 0px;
+            font-size: 13px;
+            color: #f00;
+        }
+        .smallVideo .time a {
+            text-decoration: none;
+            color: yellow;
+        }
+
+
+        .footer {
+            margin: 0px;
+            color: black;
+            text-align: center;
+            font-style: italic;
+            background-color: yellow;
+        }
+        .footer p {
+            padding: 10px 0px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="leftBar">
+        <div class="foodImage">
+<!--          h1标签在这里主要用于SEO用于收录关键字的权重  -->
+            <h1><a href="#"><img src="../static/img/CMB.png" alt="Logo"></a></h1>
+        </div>
+        <div class="describeText">
+            <p>
+                Home
+            </p>
+            <p>
+                About
+            </p>
+            <p>
+                Shop
+            </p>
+            <p>
+                Customers
+            </p>
+            <p>
+                Contact
+            </p>
+        </div>
+        <audio src="./file/menu.ogg"  controls></audio>
+
+    </div>
+    <div class="right">
+        <div class="topImage">
+            <img src="../static/img/image2.webp" alt="">
+        </div>
+       <div class="bottomVideo">
+           <div class="smallVideo">
+               <p>
+                   Type and my test it to make a type
+               </p>
+               <video src="./file/movie.ogg" loop controls poster="./file/timg.jpg"></video>
+               <p class="small-describe">我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁</p>
+               <p class="time">2022年5月20日<a href="#">[continue]</a></p>
+
+           </div>
+           <div class="smallVideo">
+               <p>
+                   Type and my test it to make a type
+               </p>
+               <video src="./file/movie.ogg" loop controls poster="./file/timg.jpg"></video>
+               <p class="small-describe">我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁</p>
+               <p class="time">2022年5月20日<a href="#">[continue]</a></p>
+
+           </div>
+           <div class="smallVideo">
+               <p>
+                   Type and my test it to make a type
+               </p>
+               <video src="./file/movie.ogg" loop controls poster="./file/timg.jpg"></video>
+               <p class="small-describe">我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁</p>
+               <p class="time">2022年5月20日<a href="#">[continue]</a></p>
+
+           </div>
+       </div>
+        <div class="bottomVideo">
+            <div class="smallVideo">
+                <p>
+                    Type and my test it to make a type
+                </p>
+                <video src="./file/movie.ogg" loop controls poster="./file/timg.jpg"></video>
+                <p class="small-describe">我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁</p>
+                <p class="time">2022年5月20日<a href="#">[continue]</a></p>
+
+            </div>
+            <div class="smallVideo">
+                <p>
+                    Type and my test it to make a type
+                </p>
+                <video src="./file/movie.ogg" loop controls poster="./file/timg.jpg"></video>
+                <p class="small-describe">我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁</p>
+                <p class="time">2022年5月20日<a href="#">[continue]</a></p>
+
+            </div>
+            <div class="smallVideo">
+                <p>
+                    Type and my test it to make a type
+                </p>
+                <video src="./file/movie.ogg" loop controls poster="./file/timg.jpg"></video>
+                <p class="small-describe">我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁我是谁</p>
+                <p class="time">2022年5月20日<a href="#">[continue]</a></p>
+
+            </div>
+        </div>
+        <footer>
+            <div class="about">
+                <p>
+                    About us! If you have any questions please contact us without any hesitation. About us! If you have any questions please contact us without any delay.About us! If you have any questions please contact us without any delay.
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="footer">
+    <p>测试网络科技有限公司copy&copy;20220520 <mark>难受哦</mark></p>
+</div>
+
+</body>
+</html>

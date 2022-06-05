@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_arguments.callee</title>
+</head>
+<body>
+
+</body>
+<script>
+    //需求: 求6!= ?
+    function fact(n) {
+        if (n == 1) {
+            return 1
+        } else  {
+            return n * fact(n - 1)
+        }
+    }
+    console.log(fact(6))
+
+    function fact2(n) {
+        if (n == 1) {
+            return 1
+        } else  {
+            return n * arguments.callee(n - 1);
+        }
+    }
+    console.log(fact2(6))
+</script>
+</html>

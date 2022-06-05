@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素</title>
+    <style>
+<!--    选择p标签中的第一个字符   -->
+        p:first-letter {
+            font: 60px 黑体;
+            color: #2c3cff;
+            text-indent: 2rem;
+        }
+        /*选择p标签的第一行*/
+        p:first-line {
+            text-decoration: underline;
+        }
+
+        p:before {
+            content: "※";
+            /*display: block;*/
+            /*padding-left: 200px;*/
+        }
+        /*双冒号,单冒号都可以*/
+        p::after {
+            content: ".......";
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <p>
+       ABCC伪元素和伪类都不会出现在源文档或者文档树中伪元素和伪类都不会出现在源文档或者文档树中伪元素和伪类都不会出现在源文档或者文档树中伪元素和伪类都不会出现在源文档或者文档树中伪元素和伪类都不会出现在源文档或者文档树中
+    </p>
+
+</div>
+
+</body>
+</html>

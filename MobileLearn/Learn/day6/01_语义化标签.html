@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_语义化标签</title>
+    <style>
+        dialog {
+            position: relative;
+        }
+        dialog span {
+            position: absolute;
+            right: 0px;
+            top: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        figure {
+            width: 400px;
+            text-align: center;
+        }
+        figure img {
+            width: 100%;
+        }
+        figure p {
+            margin-top: -4px;
+        }
+    </style>
+</head>
+<body>
+<!-- 1.mark:高亮显示 -->
+<p>
+    括号内的序号都是从1开始的，0是无效的2. <mark>高亮显示`p`</mark>所在同一个父元素的所有元素都有占位，所以会出现跳号的情况（例子中 p:nth-child(5)不存在）
+</p>
+<!-- 2.summary(摘要)与details(描述):一般用于名词解释 -->
+<details>
+    <summary>
+        大前端开发
+    </summary>
+   <h2>
+       大前端开户包括:
+   </h2>
+    <ul>
+        <li>组件化开发</li>
+        <li>模块化开发</li>
+        <li>自动化开发</li>
+        <li>后台开发</li>
+    </ul>
+</details>
+
+<!--3.meter:定义度量衡-->
+<meter value="110" min="80" max="120"></meter>公司每小时
+
+<!--4.progress:进度条-->
+<p>任务已完成:</p><progress value="70"  min="0" max="100" ></progress>70%
+
+<!--5.dialog:对话框或窗口-->
+<dialog open>
+    <span>&times;</span>
+    <h2>
+        大前端开户包括:
+    </h2>
+    <ul>
+        <li>组件化开发</li>
+        <li>模块化开发</li>
+        <li>自动化开发</li>
+        <li>后台开发</li>
+    </ul>
+</dialog>
+
+<!--6.figure:用于对元素进行组合,(一般用来组合一张图的标题,图片和图片描述等)-->
+<figure>
+    <h4>夏日风情</h4>
+    <img src="../static/img/image1.webp" alt="夏日风情">
+    <p>花儿朵朵开,夕阳无限好!</p>
+</figure>
+
+</body>
+</html>

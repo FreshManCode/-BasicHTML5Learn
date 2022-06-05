@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_return</title>
+</head>
+<body>
+
+</body>
+<script>
+    function myMax(a,b) {
+        return Math.max(a,b);
+    }
+    console.log(myMax(10,20))
+
+    //IIFE
+    var  res = (function (a,b) {
+        return Math.max(a,b);
+    })(20,100)
+    console.log('res is:',res)
+
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta keywords="行内元素与块级元素" content="行内元素与块级元素">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h3>块内元素和行级元素</h3>
+<!-- 块级元素:相当于执行了display:block 操作
+1.独占一行
+2.宽度/高度可控的,如果没有设置宽度/高度,默认铺满整行
+3.其内可以包含块级/行级标签(元素)
+
+行级元素:相当执行了display:inline操作
+1.不会独占一行,与相邻的行级元素占同一行,直到占满,会自动掉到下一行;
+2.宽度和高度是不可控的
+3.其内只能包含行级元素
+  -->
+
+<!--  观察如下代码的不同,便可发现行级标签与块级标签的不同  -->
+    <div>这是块级标签</div>
+    <p style="width: 300px;height: 50px;background-color: red">块级标签二哈哈</p>
+    <strong>行级标签哈</strong>
+    <span style="width: 300px;height: 50px;background-color: red">行级标签哈</span>
+
+<!--  块级标签转为行级标签  -->
+    <p style="width: 300px;height: 50px;background-color: red;display: inline">块级标签二哈哈</p>
+<!--  行级标签转换为块级标签  -->
+    <span style="width: 300px;height: 50px;background-color: rebeccapurple;display: block">行级标签哈</span>
+
+<!--  引用标签 q;会自动给里面的内容添加双引号  -->
+    <q>这是引用标签哈哈</q>
+
+<!--  address 地址标签,为网页加入地址相关信息,有倾斜效果 -->
+    <address>
+        <p>电话:18811111111</p>
+        <p>地址:安徽省安徽省安徽省</p>
+    </address>
+
+
+<!--  caption为表格设置标题  -->
+<!-- emmet语法   table[border=1]>caption-->
+    <table border="1">
+        <caption>测试信息表</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+<!--    table[border=1]>caption{学生信息表}+tr>td*3-->
+    <table border="1">
+        <caption>学生信息表</caption>
+        <tr>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>性别</td>
+        </tr>
+        <tr>
+            <td>李白</td>
+            <td>29</td>
+            <td>男</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>

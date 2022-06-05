@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_创建对象</title>
+</head>
+<body>
+
+</body>
+<script>
+    //new
+    var obj1 = new Object();
+    obj1.name = 'Libai'
+    obj1.age  = 16
+    obj1.log  = function ( ) {
+        console.log('obj1的log')
+    } ;
+    console.log(obj1)
+    obj1.log();
+
+    //创建对象的同时并对该对象进行初始化处理
+    var obj2 = new Object({name:'哈哈',age:'18'});
+    console.log(obj2)
+
+    //字面量定义
+    var obj3 = {
+        test:function () {
+            console.log('obj3的test函数')
+        }
+    }
+    obj3.name = 'Liba32'
+    obj3.age  = 3
+    obj3.log  = function ( ) {
+        console.log('obj3的log')
+    } ;
+    obj3.log();
+    obj3.test();
+
+</script>
+</html>

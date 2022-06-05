@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_global对象</title>
+</head>
+<body>
+
+</body>
+<script>
+    //x为全局变量,它的作用范围为当前文件
+    //相当于window.x = '1111'
+    var  x = '1111'
+    function fn() {
+        console.log(x)
+    }
+
+    var  obj = {
+        name : x,
+        price:19.99,
+    }
+    fn()
+    console.log(obj.name)
+</script>
+</html>

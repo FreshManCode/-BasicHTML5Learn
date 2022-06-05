@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两栏布局_左右都固定</title>
+    <style>
+        body {
+            font-size: 18px;
+            min-width: 600px;
+        }
+
+        .container {
+            width: 1000px;
+            overflow: hidden;
+        }
+        .left {
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: #ff0000;
+
+        }
+        .right {
+            width: 790px;
+            height: 200px;
+            float: right;
+            background-color: #0f0;
+            margin-left: -150px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left">左侧自适应</div>
+    <div class="right">右侧固定</div>
+</div>
+
+</body>
+</html>

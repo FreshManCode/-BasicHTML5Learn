@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_构造函数</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj = {name:"李白",price:12.00}
+    //typeof 用来获取数据类型,一般只用来获取基本数据类型;引用数据类型均为object
+    console.log(typeof obj)
+
+    var  array = [1,2,3]
+
+    //instanceof:用来测试引用类型的实例属于哪一个类
+    console.log(obj instanceof Object) //true
+
+    console.log(array instanceof Array) //true
+    console.log(array instanceof Object) //true
+    //所有的引用类型都属于object的实例
+
+    //构造函数创建对象
+    function Person(name,age) {
+        //构造函数名首字母要大写(这里创建的不止一个函数,实际是构建了一个类)
+        //this代表的不是Perosn,而是实例化后的对象
+        this.name = name
+        this.age = age
+        this.fn = function () {
+            return this.name + this.age
+        }
+    }
+    //实例化对象
+    var  obj2 = new Person('李白',1200)
+    var  obj3 = new Person('王维',1190)
+    console.log(obj2,obj2.name)
+    console.log(obj3)
+
+    console.log(obj2 instanceof Person) //true
+
+
+</script>
+</html>
