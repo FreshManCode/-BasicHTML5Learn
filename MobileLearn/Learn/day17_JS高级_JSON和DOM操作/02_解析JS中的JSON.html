@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_解析JS中的JSON</title>
+</head>
+<body>
+<ul id="testUL"></ul>
+
+</body>
+<script>
+    //1.解析JS中的JSON
+    var complexData = [
+        {
+            no:'221',
+            name:'李白',
+            age:'2112',
+            tel:"18888888888",
+        },
+        {
+            no:'221',
+            name:'李白',
+            age:'2112',
+            tel:"18888888888",
+        },
+        {
+            no:'221',
+            name:'李白',
+            age:'2112',
+            tel:"18888888888",
+        }
+    ]
+    //解析JSON,直接访问JSON存储的变量即可
+    console.log('complexData:',complexData)
+
+    var jsonStr = '{\n' +
+        '    "head": {\n' +
+        '        "code": "200",\n' +
+        '        "msg": "返回正确"\n' +
+        '    },\n' +
+        '    "body": {\n' +
+        '        "data": {\n' +
+        '            "pageInitCustom": {\n' +
+        '                "template": "add_bank_card",\n' +
+        '                "functionCode": "11",\n' +
+        '                "operType": "11"\n' +
+        '            },\n' +
+        '            "couldBind": "1",\n' +
+        '            "couldUnbind": "1",\n' +
+        '            "memberType": "2",\n' +
+        '            "bankCardInfos": [{\n' +
+        '                "logoUrl": "http://m.weibopay.com/mobile-cashdesk/logo/bank/h5/ABC.png",\n' +
+        '                "bankCode": "45689",\n' +
+        '                "bankName": "中国农业银行",\n' +
+        '                "cardId": "166666",\n' +
+        '                "bankCardNo": "66666666666666666",\n' +
+        '                "lastNumber": "16666",\n' +
+        '                "cardType": "DEBIT",\n' +
+        '                "isSafeCard": "Y",\n' +
+        '                "cardFlag": "SAFE_CARD",\n' +
+        '                "phoneNo": "138****8888",\n' +
+        '                "cardColor": "1",\n' +
+        '                "isWithholdCard": "Y"\n' +
+        '            }, {\n' +
+        '                "logoUrl": "http://m.weibopay.com/mobile-cashdesk/logo/bank/h5/ICBC.png",\n' +
+        '                "bankCode": "45689",\n' +
+        '                "bankName": "中国工商银行",\n' +
+        '                "cardId": "188888",\n' +
+        '                "bankCardNo": "88888888888888888",\n' +
+        '                "lastNumber": "18888",\n' +
+        '                "cardType": "DEBIT",\n' +
+        '                "isSafeCard": "N",\n' +
+        '                "phoneNo": "138****6666",\n' +
+        '                "cardFlag": "WITHDRAW_CARD",\n' +
+        '                "cardColor": "2"\n' +
+        '            }, {\n' +
+        '                "logoUrl": "http://m.weibopay.com/mobile-cashdesk/logo/bank/h5/ABC.png",\n' +
+        '                "bankCode": "45689",\n' +
+        '                "bankName": "中国农业银行",\n' +
+        '                "cardId": "266666",\n' +
+        '                "bankCardNo": "66666666666666666",\n' +
+        '                "lastNumber": "26666",\n' +
+        '                "cardType": "DEBIT",\n' +
+        '                "isSafeCard": "Y",\n' +
+        '                "cardFlag": "SAFE_CARD",\n' +
+        '                "phoneNo": "138****8888",\n' +
+        '                "cardColor": "1"\n' +
+        '            }, {\n' +
+        '                "logoUrl": "http://m.weibopay.com/mobile-cashdesk/logo/bank/h5/ICBC.png",\n' +
+        '                "bankCode": "45689",\n' +
+        '                "bankName": "中国工商银行",\n' +
+        '                "cardId": "288888",\n' +
+        '                "bankCardNo": "88888888888888888",\n' +
+        '                "lastNumber": "28888",\n' +
+        '                "cardType": "DEBIT",\n' +
+        '                "isSafeCard": "N",\n' +
+        '                "phoneNo": "138****6666",\n' +
+        '                "cardFlag": "WITHDRAW_CARD",\n' +
+        '                "cardColor": "2",\n' +
+        '                "isWithholdCard": "Y"\n' +
+        '            }, {\n' +
+        '                "logoUrl": "http://m.weibopay.com/mobile-cashdesk/logo/bank/h5/ABC.png",\n' +
+        '                "bankCode": "45689",\n' +
+        '                "bankName": "中国农业银行",\n' +
+        '                "cardId": "366666",\n' +
+        '                "bankCardNo": "66666666666666666",\n' +
+        '                "lastNumber": "36666",\n' +
+        '                "cardType": "DEBIT",\n' +
+        '                "isSafeCard": "Y",\n' +
+        '                "cardFlag": "SAFE_CARD",\n' +
+        '                "phoneNo": "138****8888",\n' +
+        '                "cardColor": "1"\n' +
+        '            }, {\n' +
+        '                "logoUrl": "http://m.weibopay.com/mobile-cashdesk/logo/bank/h5/ICBC.png",\n' +
+        '                "bankCode": "45689",\n' +
+        '                "bankName": "中国工商银行",\n' +
+        '                "cardId": "388888",\n' +
+        '                "bankCardNo": "88888888888888888",\n' +
+        '                "lastNumber": "38888",\n' +
+        '                "cardType": "DEBIT",\n' +
+        '                "isSafeCard": "N",\n' +
+        '                "phoneNo": "138****6666",\n' +
+        '                "cardFlag": "WITHDRAW_CARD",\n' +
+        '                "cardColor": "2",\n' +
+        '                "isWithholdCard": "Y"\n' +
+        '            }]\n' +
+        '        }\n' +
+        '    }\n' +
+        '}\n'
+
+    console.log('jsonStr:',jsonStr)
+    //2.解析JSON str
+    let objJson = JSON.parse(jsonStr)
+    console.log('objJson:',objJson)
+
+    var txt = ''
+    let bankCardInfos = objJson.body.data.bankCardInfos
+    bankCardInfos.forEach(item=>{
+        txt += '<li>' +  item.bankName + '(' + item.bankCode +')' + '</li>'
+    })
+    console.log('txt is:',txt)
+    document.getElementById('testUL').innerHTML = txt
+
+
+
+</script>
+</html>

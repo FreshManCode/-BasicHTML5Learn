@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_JSON表现方式</title>
+</head>
+<body>
+
+</body>
+<script>
+    //1.JSON表示法
+    //1.单值 (值不能是undefined)
+    var productName = '呵呵'
+    var price = 199.0
+
+    //2.对象 (对象中的key可以不加引号,也可以是单/双引号,如果键中有空格或其它符号必须用单/双引号;值如果是字符型可以加单/双引号,其它类型不加引号)
+    var data = {
+        pId :'12121',
+        pName :'呵呵',
+        price:'2.0',
+    }
+
+    //3.数组 (字符型的值要用单/双引号,其它类型的值不加引号)
+    var dataArray = [10,20,30,'abc']
+
+    //4.复杂数据
+    var complexData = [
+        {
+            no:'221',
+            name:'李白',
+            age:'2112',
+            tel:"18888888888",
+        },
+        {
+            no:'221',
+            name:'李白',
+            age:'2112',
+            tel:"18888888888",
+        },
+        {
+            no:'221',
+            name:'李白',
+            age:'2112',
+            tel:"18888888888",
+        }
+    ]
+</script>
+</html>
