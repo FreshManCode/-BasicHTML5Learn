@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_解析JSON文件</title>
+</head>
+<body>
+<ul id = 'testUL'>
+
+</ul>
+
+</body>
+<script>
+
+    //1.创建请求对象
+    var XHR = new XMLHttpRequest();
+    //2.建立请求链接
+    XHR.open('get','./file/test.json',true) //get:请求方式 true:表示异步操作 ;false:同步操作
+    //4.前端对请求的结果进行处理
+    XHR.onreadystatechange = function () {
+        //如果请求成功
+        if (XHR.readyState == 4 && XHR.status == 200) {
+            //responseText 获取请求的结果
+            var resultJson = JSON.parse((XHR.responseText)),txt = '';
+            let banks = resultJson.body.data.bankCardInfos
+            banks.forEach(function (item){
+                txt += '<li>' + item.bankName + '(' + item.lastNumber + ')' + '</li>'
+            })
+            document.getElementById("testUL").innerHTML = txt;
+
+            console.log(JSON.parse(XHR.responseText))
+        }
+    }
+    //3.向后台发送请求
+    XHR.send();
+</script>
+</html>

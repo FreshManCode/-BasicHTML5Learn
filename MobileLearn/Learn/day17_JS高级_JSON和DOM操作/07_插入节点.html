@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_插入节点</title>
+</head>
+<body>
+<ul class="list">
+    <li>li1</li>
+    <li>li2</li>
+    <li>li3</li>
+    <li>li4</li>
+</ul>
+
+
+</body>
+<script>
+    var li = document.createElement('li')
+    var txt = document.createTextNode('这是Dynamic新常见的li标签')
+    li.appendChild(txt)
+    //父节点appendChild(创建的节点)
+    var  list = document.getElementsByClassName('list')[0]
+    list.append(li)
+
+
+    //父节点.insertBefore(创建的节点,已知的节点)
+    // var oLi = document.getElementsByName('li')[2]
+    //从父级元素获取子元素
+    var oLi = list.getElementsByTagName('li')[2]
+    list.insertBefore(li,oLi)
+</script>
+</html>

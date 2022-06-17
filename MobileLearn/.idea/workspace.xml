@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/03_解析JSON文件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/04_DOM属性.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/05_获取节点.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/06_创建DOM节点.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/07_插入节点.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记说明/day17_JS高级_JSON和DOM操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记说明/day17_JS高级_JSON和DOM操作.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +93,9 @@
       <workItem from="1654065199775" duration="8985000" />
       <workItem from="1654142601052" duration="18644000" />
       <workItem from="1654651217721" duration="3882000" />
+      <workItem from="1655169398665" duration="2431000" />
+      <workItem from="1655342873253" duration="1098000" />
+      <workItem from="1655427753122" duration="1560000" />
     </task>
     <servers />
   </component>

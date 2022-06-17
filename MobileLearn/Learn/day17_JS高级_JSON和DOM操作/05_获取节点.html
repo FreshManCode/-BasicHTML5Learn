@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_获取节点</title>
+</head>
+<body>
+    <div id="box">box</div>
+    <p>11</p>
+    <p>22</p>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+
+    <input type="text" name="userName" placeholder="请输入姓名">
+    <input type="text" name="email" placeholder="请输入邮件">
+
+</body>
+<script>
+    //通过ID获取节点
+    var box = document.getElementById('box')
+    console.log(box)
+    box.style.color = 'red'
+
+    //通过标签获取
+    var pArray = document.getElementsByTagName('p')
+    console.log(pArray)
+    pArray[0].style.fontSize = '30px'
+
+    //通过name获取
+    var namesArray = document.getElementsByName('userName')
+    console.log('namesArray:',namesArray)
+    namesArray[0].style.color = 'blue'
+    namesArray[0].value = 'blue'
+
+    //通过class获取
+    var  classesArray = document.getElementsByClassName('box1')
+    classesArray[0].innerHTML= 'backgroundColor:red'
+
+
+    //只返回匹配到的第一个值
+    console.log(document.querySelector('p'))
+
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_DOM属性</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box">
+        <div id="content" title="呵呵哒">
+            test_test_test
+            <p style="background-color:#fff; color: red;font-size: 20px">
+                akakkadad
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    //1.节点的名称
+
+    //1.1 标签
+    console.log(document.getElementById('content').nodeName) //DIV
+
+    //1.2 属性
+    console.log(document.getElementById('content').getAttributeNode('title').nodeName) //title
+
+    //1.3 文本节点 ->#text
+    console.log(document.getElementById('content').childNodes[0].nodeName) //#text
+
+    //1.4 文档节点 ->#document
+    console.log(document.nodeName) //#document
+
+
+
+    //2.节点的值
+    console.log(document.getElementById('content').nodeValue) //null
+    //文本节点
+    console.log(document.getElementById('content').getAttributeNode('title').nodeValue) //呵呵哒
+    //属性节点
+    console.log(document.getElementById('content').childNodes[0].nodeValue) //test_test_test
+
+    console.log(document.getElementsByTagName('p')[0].getAttributeNode('style').nodeValue) //background-color:#fff; color: red;font-size: 20px
+
+
+
+
+
+
+</script>
+</html>
