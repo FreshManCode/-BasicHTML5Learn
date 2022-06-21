@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_替换节点</title>
+</head>
+<body>
+
+<div class="box">
+    box
+</div>
+<strong>
+    strong
+</strong>
+
+</body>
+<script>
+    //需求:将strong标签修改成'<p style='color:pink;border:2px solid dotted #000'>'
+    function repaceNode() {
+        //1.创建节点
+        var newP = document.createElement('p')
+        newP.setAttribute('style','color:pink;border:2px  dotted #000')
+        newP.setAttribute('title','节点修改')
+        newP.innerHTML = '这是修改后的节点内容'
+        console.log(newP)
+
+        //2.替换节点
+        var onBody = document.body; //对于节点的获取,最好缓存到内存变量中
+        var oldStrong = document.getElementsByTagName('strong')[0];
+        onBody.replaceChild(newP,oldStrong)
+    }
+    repaceNode();
+</script>
+</html>

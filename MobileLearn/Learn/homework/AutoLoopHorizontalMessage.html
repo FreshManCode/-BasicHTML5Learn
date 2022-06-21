@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--  水平方向自动翻滚的通知消息条  -->
+    <title>AutoLoopHorizontalMessage</title>
+    <style>
+        .box {
+            width: 90%;
+            border: 1px dashed #ececec;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #messageWrapper {
+            line-height: 2em;
+            margin-top: 100px;
+            height: 100px;
+            padding: 0px 20px;
+            overflow: hidden;
+            width: 10000px;
+        }
+        #list {
+             margin: 0;
+             padding: 0;
+         }
+        #list li {
+            list-style-type: none;
+            padding: 25px 0;
+            display: flex;
+            flex-direction: row;
+            float: left;
+            width: 370px;
+            /*background-color: #f5f5f5;*/
+            /*border-radius: 10px;*/
+            margin: 0 10px;
+        }
+
+        #list li p {
+            flex: 1;
+            text-align: center;
+            margin: 0 5px;
+            overflow: hidden;
+        }
+
+        #listWrapper2 {
+            line-height: 2em;
+            height: 100px;
+            padding: 0px 20px;
+            overflow: hidden;
+            width: 10000px;
+        }
+
+        #list2 {
+            margin: 0;
+            padding: 0;
+        }
+        #list2 li {
+            list-style-type: none;
+            padding: 25px 0;
+            display: flex;
+            flex-direction: row;
+            float: left;
+            width: 370px;
+            margin: 0 20px;
+        }
+        #list li:nth-child(2n) {
+            margin: 0 50px;
+        }
+
+
+        #list2 li p {
+            flex: 1;
+            text-align: center;
+            margin: 0 5px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 15px;
+            height: 15px;
+            margin-top: 9px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div id="messageWrapper" >
+        <ul id="list">
+            <li>
+                <p>139****1926</p>
+                <p>在11:49分查询</p>
+                <p>120分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>138****1916</p>
+                <p>在11:36分查询</p>
+                <p>90分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>155****2971</p>
+                <p>在12:00分查询</p>
+                <p>100分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>137****1916</p>
+                <p>在12:20分查询</p>
+                <p>137分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>135****1216</p>
+                <p>在11:20分查询</p>
+                <p>126分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>183****1216</p>
+                <p>在12:30分查询</p>
+                <p>139分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>135****12936</p>
+                <p>在13:20分查询</p>
+                <p>149分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>156****2826</p>
+                <p>在11:20分查询</p>
+                <p>118分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>188****2921</p>
+                <p>在14:20分查询</p>
+                <p>110分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>156****5555</p>
+                <p>在14:20分查询</p>
+                <p>109分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+        </ul>
+    </div>
+    <div class="listWrapper2" id="listWrapper2">
+        <ul id="list2">
+            <li>
+                <p>139****1926</p>
+                <p>在11:49分查询</p>
+                <p>120分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>138****1916</p>
+                <p>在11:36分查询</p>
+                <p>90分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>155****2971</p>
+                <p>在12:00分查询</p>
+                <p>100分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>137****1916</p>
+                <p>在12:20分查询</p>
+                <p>137分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>135****1216</p>
+                <p>在11:20分查询</p>
+                <p>126分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>183****1216</p>
+                <p>在12:30分查询</p>
+                <p>139分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>135****12936</p>
+                <p>在13:20分查询</p>
+                <p>149分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>156****2826</p>
+                <p>在11:20分查询</p>
+                <p>118分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+            <li>
+                <p>188****2921</p>
+                <p>在14:20分查询</p>
+                <p>110分</p>
+                <img src="./file/emoj/1.jpeg" alt="emoji">
+            </li>
+            <li>
+                <p>156****5555</p>
+                <p>在14:20分查询</p>
+                <p>109分</p>
+                <img src="./file/emoj/2.webp" alt="emoji">
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+<script>
+    var messageWrapper = document.getElementById('box')
+    console.log('messageWrapper:',messageWrapper)
+    var list = document.getElementById('messageWrapper')
+
+    var listWrapper2 = document.getElementById('listWrapper2')
+    var list2= document.getElementById('list2')
+    console.log('list:',list)
+    var timer = undefined
+    var timerGap = 5;
+
+    var listConent = list.innerHTML
+    //再追加一遍
+    list.innerHTML += listConent;
+
+    list2.innerHTML += list2.innerHTML
+    // timerFire();
+
+
+
+    console.log('messageWrapper.scrollLeft:',messageWrapper.scrollLeft,'list.offsetWidth:',list.offsetWidth)
+    console.log('list.offsetWidth:',list.offsetWidth,'list.offsetWidth>>1:',list.offsetWidth>>1,'list.offsetWidth<<1:',list.offsetWidth<<1)
+        //>> 1 右移一位,相当于去掉最低位,对应着减半操作
+        if (messageWrapper.scrollLeft > (list.offsetWidth >> 1) ) {
+            messageWrapper.scrollLeft = 0
+        } else  {
+            messageWrapper.scrollLeft ++
+        }
+
+    function timerFire() {
+        if (!timer) {
+            timer = setInterval(loopText,timerGap)
+        }
+    }
+
+    function freezeTimer() {
+        clearInterval(timer);
+        timer = null;
+    }
+
+    //鼠标移入时
+    messageWrapper.onmouseover = function () {
+        // console.log('鼠标移入到messageWrapper 这个div中了')
+    }
+
+    //鼠标移除时
+    messageWrapper.onmouseout = function () {
+        // console.log('鼠标移除messageWrapper 这个div了')
+    }
+
+    function testLeftAndRightMove() {
+        let number1 = -10
+        let number2 = 10
+        console.log('number2<<1:',number2<<1,'number1<<1',number1<<1) //20 -20
+        console.log('number2>>1:',number2>>1,'number1>>1',number1>>1)// 5 -5
+
+        let number3 = 5
+        let number4 = -5
+        console.log('number3<<1:',number3<<1,'number4<<1',number4<<1) //10 -10
+        console.log('number3>>1:',number3>>1,'number4>>1',number4>>1)// 2 -3
+    }
+    testLeftAndRightMove();
+
+</script>
+</html>

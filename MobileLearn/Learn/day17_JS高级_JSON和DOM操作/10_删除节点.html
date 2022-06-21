@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_删除节点</title>
+</head>
+<body>
+<div class="box">
+    <strong>strong</strong>
+    <span>span</span>
+</div>
+<ul>
+    <li>1li</li>
+    <li>2li</li>
+    <li>3li</li>
+    <li>4li</li>
+    <li>5li</li>
+</ul>
+
+</body>
+<script>
+    var box = document.getElementsByClassName('box')[0];
+    //删除当前节点以及子节点
+    // box.remove();
+
+    //删除子节点
+    var span = box.getElementsByTagName('span')[0];
+    box.removeChild(span)
+
+    //需求:删除ul中的所有li标签
+    var uls = document.getElementsByTagName('ul')[0];
+    var lis = uls.getElementsByTagName('li');
+    for (var i = 0;i <lis.length;i ++) {
+        uls.removeChild(lis[i])
+        --i;
+    }
+
+
+
+</script>
+</html>

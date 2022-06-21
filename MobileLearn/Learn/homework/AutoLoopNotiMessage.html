@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--  垂直方向自动翻滚的通知消息条  -->
+    <title>AutoLoopNotiMessage</title>
+    <style>
+        .box {
+            width: 90%;
+            border: 1px dashed #ececec;
+            margin: 0 auto;
+        }
+        .header {
+            margin-top: 100px;
+            padding: 0px 20px;
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+        }
+        .header p {
+            text-align: center;
+            flex: 1;
+            margin: 0 5px;
+        }
+        #messageWrapper {
+            line-height: 2em;
+            margin-top: 100px;
+            height: 250px;
+            padding: 0px 20px;
+            width: 90%;
+            overflow: hidden;
+        }
+        #list {
+             margin: 0;
+             padding: 0;
+             width: 100%;
+         }
+        #list li {
+            list-style-type: none;
+            padding: 25px 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /*简单设置文字渐变色*/
+        /*第一行设置文字渐变色*/
+        #list li:first-child {
+            background-image: linear-gradient(to left, red,blue);
+            -webkit-text-fill-color: transparent;
+            /*设置填充模式为text,缺少无法达到该效果*/
+            -webkit-background-clip: text;
+        }
+
+
+        #list li p {
+            flex: 1;
+            text-align: center;
+            margin: 0 5px;
+            overflow: hidden;
+        }
+
+        #list li:hover p {
+            background-image: linear-gradient(to right, red,blue);
+            -webkit-text-fill-color: transparent;
+            /*设置填充模式为text,缺少无法达到该效果*/
+            -webkit-background-clip: text;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="header">
+        <p>姓名</p>
+        <p>状态</p>
+        <p>查询积分分数</p>
+    </div>
+    <div id="messageWrapper" >
+        <ul id="list">
+            <li>
+                <p>139****1926</p>
+                <p>在11:49分查询</p>
+                <p>120分</p>
+            </li>
+            <li>
+                <p>138****1916</p>
+                <p>在11:36分查询</p>
+                <p>90分</p>
+            </li>
+            <li>
+                <p>155****2971</p>
+                <p>在12:00分查询</p>
+                <p>100分</p>
+            </li>
+            <li>
+                <p>137****1916</p>
+                <p>在12:20分查询</p>
+                <p>137分</p>
+            </li>
+            <li>
+                <p>135****1216</p>
+                <p>在11:20分查询</p>
+                <p>126分</p>
+            </li>
+            <li>
+                <p>183****1216</p>
+                <p>在12:30分查询</p>
+                <p>139分</p>
+            </li>
+            <li>
+                <p>135****12936</p>
+                <p>在13:20分查询</p>
+                <p>149分</p>
+            </li>
+            <li>
+                <p>156****2826</p>
+                <p>在11:20分查询</p>
+                <p>118分</p>
+            </li>
+            <li>
+                <p>188****2921</p>
+                <p>在14:20分查询</p>
+                <p>110分</p>
+            </li>
+            <li>
+                <p>156****5555</p>
+                <p>在14:20分查询</p>
+                <p>109分</p>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+</body>
+<script>
+    var messageWrapper = document.getElementById('messageWrapper')
+    console.log('messageWrapper:',messageWrapper)
+    var list = document.getElementById('list')
+    console.log('list:',list)
+    var timer = undefined
+    var timerGap = 10;
+
+    var listConent = list.innerHTML
+    //再追加一遍
+    list.innerHTML += listConent;
+    timerFire();
+
+    function loopText() {
+        //滚上去的内容大于ul内容高度的一半，重置高度 0
+        if (messageWrapper.scrollTop > (list.offsetHeight >> 1) ) {
+            messageWrapper.scrollTop = 0
+        } else  {
+            messageWrapper.scrollTop ++
+        }
+    }
+
+    function timerFire() {
+        if (!timer) {
+            timer = setInterval(loopText,timerGap)
+        }
+    }
+
+    function freezeTimer() {
+        clearInterval(timer);
+        timer = null;
+    }
+
+    //鼠标移入时
+    messageWrapper.onmouseover = function () {
+        // console.log('鼠标移入到messageWrapper 这个div中了')
+    }
+
+    //鼠标移除时
+    messageWrapper.onmouseout = function () {
+        // console.log('鼠标移除messageWrapper 这个div了')
+    }
+
+</script>
+</html>

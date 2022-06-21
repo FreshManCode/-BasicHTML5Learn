@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/03_解析JSON文件.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/04_DOM属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/05_获取节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/06_创建DOM节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/07_插入节点.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/08_替换节点.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/09_克隆节点.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/10_删除节点.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/11_节点属性操作.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/12_节点文本操作.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file/images/01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file/images/02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/AutoLoopHorizontalMessage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/AutoLoopNotiMessage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/file/emoj/1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/file/emoj/2.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learn/day7/16_文字渐变.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/day7/16_文字渐变.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learn/day7/17_box-sizing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/day7/17_box-sizing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记说明/day17_JS高级_JSON和DOM操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记说明/day17_JS高级_JSON和DOM操作.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +36,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="28MyZ6MUc9tgeBfWUPRNlWO2cbj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -39,25 +49,25 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Learn/homework" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Learn/day11/file/imgs" />
-      <recent name="$PROJECT_DIR$/Learn/day10/file" />
-      <recent name="$PROJECT_DIR$/Learn/homework/file/day9/fonts" />
-      <recent name="$PROJECT_DIR$/Learn/homework/file/day9/imgs" />
-      <recent name="$PROJECT_DIR$/Learn/day9/file/iconfont" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Learn/homework/file/emoj" />
       <recent name="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file" />
       <recent name="$PROJECT_DIR$/Learn/day11/public/css" />
       <recent name="$PROJECT_DIR$/Learn/day10/file/SVG" />
       <recent name="$PROJECT_DIR$/Learn/day10" />
-      <recent name="$PROJECT_DIR$/Learn/day9/file/iconfont/css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Learn/homework" />
+      <recent name="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file/images" />
+      <recent name="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作" />
+      <recent name="$PROJECT_DIR$/Learn/day11/file/imgs" />
+      <recent name="$PROJECT_DIR$/Learn/day10/file" />
     </key>
   </component>
   <component name="RunManager">
@@ -96,6 +106,7 @@
       <workItem from="1655169398665" duration="2431000" />
       <workItem from="1655342873253" duration="1098000" />
       <workItem from="1655427753122" duration="1560000" />
+      <workItem from="1655687780287" duration="19354000" />
     </task>
     <servers />
   </component>
@@ -213,20 +224,21 @@
     </state>
     <state x="698" y="114" key="SettingsEditor/0.25.1680.949@0.25.1680.949" timestamp="1651802124492" />
     <state x="698" y="116" key="SettingsEditor/0.25.1680.965@0.25.1680.965" timestamp="1651116948539" />
-    <state x="830" y="247" width="674" height="496" key="find.popup" timestamp="1653729165343">
-      <screen x="0" y="25" width="1680" height="958" />
+    <state x="830" y="249" width="674" height="502" key="find.popup" timestamp="1655708753964">
+      <screen x="0" y="25" width="1680" height="968" />
     </state>
     <state x="830" y="243" width="674" height="486" key="find.popup/0.25.1680.940@0.25.1680.940" timestamp="1653288947730" />
     <state x="830" y="244" width="674" height="486" key="find.popup/0.25.1680.945@0.25.1680.945" timestamp="1653283047111" />
     <state x="830" y="245" width="674" height="486" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1651895900997" />
     <state x="830" y="245" width="674" height="488" key="find.popup/0.25.1680.951@0.25.1680.951" timestamp="1652781556939" />
     <state x="830" y="247" width="674" height="496" key="find.popup/0.25.1680.958@0.25.1680.958" timestamp="1653729165343" />
+    <state x="830" y="249" width="674" height="502" key="find.popup/1680.25.1920.1055/0.25.1680.968@0.25.1680.968" timestamp="1655708753964" />
     <state x="437" y="209" key="run.anything.popup" timestamp="1652523835740">
       <screen x="0" y="25" width="1680" height="940" />
     </state>
     <state x="437" y="209" key="run.anything.popup/0.25.1680.940@0.25.1680.940" timestamp="1652523835740" />
-    <state x="718" y="304" width="670" height="691" key="search.everywhere.popup" timestamp="1654416658779">
-      <screen x="0" y="25" width="1680" height="969" />
+    <state x="718" y="304" width="670" height="691" key="search.everywhere.popup" timestamp="1655712335954">
+      <screen x="0" y="25" width="1680" height="968" />
     </state>
     <state x="718" y="295" width="670" height="671" key="search.everywhere.popup/0.25.1680.940@0.25.1680.940" timestamp="1652691527090" />
     <state x="718" y="296" width="670" height="673" key="search.everywhere.popup/0.25.1680.942@0.25.1680.942" timestamp="1652762268301" />
@@ -236,5 +248,18 @@
     <state x="718" y="301" width="670" height="685" key="search.everywhere.popup/0.25.1680.960@0.25.1680.960" timestamp="1652347697236" />
     <state x="718" y="302" width="670" height="687" key="search.everywhere.popup/0.25.1680.964@0.25.1680.964" timestamp="1652318837712" />
     <state x="718" y="304" width="670" height="691" key="search.everywhere.popup/0.25.1680.969@0.25.1680.969" timestamp="1654416658779" />
+    <state x="718" y="304" width="670" height="691" key="search.everywhere.popup/1680.25.1920.1055/0.25.1680.968@0.25.1680.968" timestamp="1655712335954" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Learn/homework/AutoLoopNotiMessage.html</url>
+          <line>137</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

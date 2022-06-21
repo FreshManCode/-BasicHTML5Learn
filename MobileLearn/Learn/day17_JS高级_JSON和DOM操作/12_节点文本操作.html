@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_节点文本操作</title>
+</head>
+<body>
+<button id="btn">呵呵哒<span>span标签</span></button>
+<img src="file/images/01.png" alt="hehe">
+<input type="text" name="txt" value="input">
+<form action="">
+    <input type="text" name="form_text" value="form_text">
+</form>
+<form action="">
+
+    <input type="radio" name="sex" value="1">男
+    <input type="radio" name="sex" value="0">女 <br>
+
+    <input type="checkbox" name = 'hobby' value="打球">打球</input>
+    <input type="checkbox" name = 'hobby' value="睡觉">睡觉</input>
+    <input type="checkbox" name = 'hobby' value="游泳">游泳</input>
+    <input type="checkbox" name = 'hobby' value="干活">干活</input>
+
+    <br>
+    <input type="button" id="submit" value="提交">
+
+
+
+
+</form>
+</body>
+<script>
+    // 节点.innerHTML //获取双标签的文本内容
+    // 节点.innerText //获取单标签的文本内容
+    // 节点.value //获取input输入框等表单控件的内容
+    console.log(document.forms[0].form_text.value)
+    //onblur:失去焦点触发该事件
+    document.forms[0].form_text.onblur = function () {
+        console.log(this.value)
+    }
+
+    document.getElementById('btn').innerHTML = 'qqqqq'
+    document.getElementById('btn').innerHTML = '这是一个<strong>标签<strong/>我试试'
+
+    //操作form表单中的单选框/复选框
+    //默认让男选中
+    document.forms[1].sex.value = '1'
+
+    //复选框单选/多选  打球和游泳默认勾选
+    //设置复选框某项被选中要用checked 来处理,不能使用value设置
+    document.forms[1].hobby[0].checked = true
+    document.forms[1].hobby[1].setAttribute('checked',true)
+    document.forms[1].hobby[2].checked = true
+
+    //点击提交按钮获取所有复选框被选中的内容
+    document.querySelector('#submit').onclick = function () {
+        //获取所有的复选框DOM
+        var chks = document.forms[1].hobby;
+        var array = []
+        console.log('chks:',chks)
+        for (let item of chks) {
+            if (item.checked) {
+                array.push(item.value)
+            }
+        }
+        console.log('array:',array)
+    }
+
+</script>
+</html>

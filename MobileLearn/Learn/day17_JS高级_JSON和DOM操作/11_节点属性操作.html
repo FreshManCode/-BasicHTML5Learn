@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_节点属性操作</title>
+    <style>
+        img {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">
+    切换图片
+</button>
+<img src="file/images/01.png" data-src="file/images/02.png" alt="图片">
+<img alt="图片">
+
+</body>
+<script>
+
+    var img = document.getElementsByTagName('img')
+    // 1.获取属性值
+    // DOM节点.属性名 //不能获取用户自定义的属性
+    // DOM节点.getAttribute(属性名) //获取所有属性包括自定义的属性值
+    console.log(img[0].src);
+    // 获取用户自定义属性,这种方式要么报错要么无法获取
+    // console.log(document.getElementsByTagName('img')[0].data-src);
+    console.log(img[0].getAttribute('src'))
+    console.log(img[0].getAttribute('data-src'))
+
+
+    // 2.设置属性值
+    // DOM节点.属性名 = 表达式|值 //不能设置用户自定义的属性
+    // DOM节点.setAttribute(属性名) //设置所有属性包括自定义的属性值
+    img[1].src ='file/images/02.png'
+    document.getElementById('btn').onclick = function () {
+        var src = img[0].getAttribute('data-src')
+        img[0].setAttribute('src',src)
+    }
+
+
+    // 3.删除属性值
+    // DOM节点.属性名 = '' //不能删除用户自定义的属性
+    // DOM节点.removeAttribute(属性名) //删除
+    // img[1].src = ''
+    img[1].removeAttribute('src')
+
+</script>
+</html>
