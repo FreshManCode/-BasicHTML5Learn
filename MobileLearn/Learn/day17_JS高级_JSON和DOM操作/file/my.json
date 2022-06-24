@@ -1,0 +1,3 @@
+{
+  "html":"<div>\n    <h3>网络表格</h3>\n    <table border=\"1px\" width=\"800\" align=\"center\" cellspacing=\"0\" style=\"border: 1px solid red\" >\n        <tr style=\"height: 100px;text-align: center\"  >\n            <td colspan=\"3\">大猩猩网站开发技术公司</td>\n        </tr>\n        <tr>\n            <td>网站测试标题</td>\n            <td style=\"text-align: right\" colspan=\"2\"><input style=\"border: 1px solid blue;border-radius: 4px\"  type=\"text\" placeholder=\"简单搜索框哦\"></td>\n        </tr>\n        <tr style=\"height: 100px;\">\n            <td>左边数据1</td>\n            <td>中间数据哦</td>\n            <td>右边数据哦</td>\n        </tr>\n        <tr style=\"height: 100px\" align=\"center\">\n            <td colspan=\"3\">网站底部信息哈</td>\n        </tr>\n    </table>\n</div>\n",
+}

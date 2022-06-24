@@ -146,3 +146,38 @@
 	* 节点.value = ''
 
 	
+### 11.DOM节点样式操作
+* 1.操作样式class	
+	* i)获取class 
+		* 节点.className 获取节点的所有class
+		* 节点.getAttraibute("class") 获取节点的所有class
+	* ii).设置class
+		* 节点.className = 值
+		* 节点.setAttribute("class",值)
+	* iii) 其它方法
+		* 节点.classList.add(value)   //为元素添加指定的类
+		* 节点.classList.contains(value) //判断元素是否含有指定的类,如果存在返回true
+		* 节点.classList.remove(value) //删除指定的类
+		* 节点.classList.toggle(value) //有就删除,没有就添加指定类
+* 2.操作内联样式
+	* i.获取内联样式
+		* 节点.style.样式属性名 //获取某个具体的内联样式
+		* 节点.style.cssText //获取某个节点的所有内联样式,返回字符串
+	* ii.) 设置内联样式
+		* 节点.style.样式属性名 = 属性值 //设置某个具体的内联样式
+		* 节点.style.cssText = 属性值或属性值列表 //设置某个节点的所有内联样式 
+### 12.事件
+* onload
+* onClick
+* ondblclick
+* onmouseover 鼠标移入
+* onmouseout
+* onmousemove
+* onkeydown
+* onkeyup
+* onkeypress
+* onblur
+* onfocus
+* onresize 
+* console.dir(document) 查看相关API
+		  

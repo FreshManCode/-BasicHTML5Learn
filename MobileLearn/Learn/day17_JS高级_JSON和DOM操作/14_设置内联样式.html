@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14_设置内联样式</title>
+    <style>
+        .p_style {
+            background: lightgrey;
+            color: red;
+        }
+        .p_yellow {
+            border: 1px solid yellow;
+        }
+
+    </style>
+</head>
+<body>
+<p style="color: red">
+    文本测试
+</p>
+<p style="color: blue;font-size: 28px;border: 1px solid #f5f5f5">
+    test2222
+</p>
+<div>
+    div
+</div>
+
+</body>
+<script>
+    var pDom = document.querySelectorAll('p');
+    //1.获取内联样式
+    console.log(pDom[0].style.color)
+    console.log(pDom[1].style.fontSize)
+
+    pDom[0].style.color = 'pink'
+
+    //获取所有内联样式
+    let cssText = pDom[1].style.cssText
+    var  arr = [],cssObj = {};
+    console.log(cssText) //color: blue; font-size: 28px;
+    //将cssText返回的字符串转换为对象
+    //分号,空格拆分
+    let cssTextArray = cssText.split("; ")
+    for (let item of cssTextArray) {
+        var newArray = item.split(":")
+        cssObj[newArray[0]] = newArray[1];
+    }
+    console.log("cssObj:",cssObj)
+
+
+    //
+    document.querySelector('div').style.cssText = 'color:red;background-color:blue'
+    console.dir(document)
+
+</script>
+</html>

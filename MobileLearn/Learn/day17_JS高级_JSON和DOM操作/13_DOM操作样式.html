@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13_DOM操作Class样式</title>
+    <style>
+        .p_style {
+            background: lightgrey;
+            color: red;
+        }
+        .p_yellow {
+            border: 1px solid yellow;
+        }
+
+
+    </style>
+</head>
+<body>
+<p class="test p_style">
+    文本测试
+</p>
+<p>
+    test2222
+</p>
+
+</body>
+<script>
+    console.log(document.getElementsByClassName('test')[0].className)
+    console.log('getAttribute:',document.querySelector('.test').className)
+
+    //动态添加class 样式
+    document.getElementsByTagName('p')[1].setAttribute('class','p_style')
+
+    var p1 = document.getElementsByTagName('p')[1]
+    p1.onclick = function () {
+        //节点.classList.toggle('value') 如果class有就删除,没有动态添加class
+        p1.classList.toggle('p_yellow')
+    }
+
+</script>
+</html>

@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/08_替换节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/09_克隆节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/10_删除节点.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/11_节点属性操作.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/12_节点文本操作.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file/images/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file/images/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/homework/AutoLoopHorizontalMessage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/homework/AutoLoopNotiMessage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/homework/file/emoj/1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/homework/file/emoj/2.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/13_DOM操作样式.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/14_设置内联样式.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file/my.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learn/day7/16_文字渐变.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/day7/16_文字渐变.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learn/day7/17_box-sizing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/day7/17_box-sizing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/03_解析JSON文件.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/03_解析JSON文件.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记说明/day17_JS高级_JSON和DOM操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记说明/day17_JS高级_JSON和DOM操作.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +97,8 @@
       <workItem from="1655169398665" duration="2431000" />
       <workItem from="1655342873253" duration="1098000" />
       <workItem from="1655427753122" duration="1560000" />
-      <workItem from="1655687780287" duration="19354000" />
+      <workItem from="1655687780287" duration="21662000" />
+      <workItem from="1655977501919" duration="2370000" />
     </task>
     <servers />
   </component>
@@ -256,7 +248,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Learn/homework/AutoLoopNotiMessage.html</url>
           <line>137</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
