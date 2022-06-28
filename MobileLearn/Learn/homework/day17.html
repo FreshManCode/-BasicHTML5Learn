@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day17</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table>thead {
+            background-color:rgb(0,153,203) ;
+            font: 18px 微软雅黑;
+            color: white;
+            text-align: center;
+        }
+        table>thead>tr>td {
+            margin: 0;
+            padding: 5px 0;
+            width:120px;
+        }
+        thead>td {
+            border-right:1px solid #ffffff;
+        }
+        thead>td:last-child {
+            border:none;
+        }
+
+        table>tbody {
+            text-align: center;
+            color: #4a4a4a;
+            font-size: 15px;
+        }
+        table>tbody>tr {
+            background-color: rgb(204,204,204);
+        }
+        table>tbody>tr>td {
+            padding: 5px 0;
+        }
+
+        table>tbody>tr:nth-child(2n){
+            background-color: rgb(192,192,192);
+        }
+
+        table>tbody>tr>td:hover {
+            color: yellow;
+        }
+
+        .photos {
+            padding: 20px 10px;
+            width: 600px;
+            margin: 100px  auto 0 auto;
+            border: 1px solid #4a4a4a;
+        }
+        .photos h2 {
+            padding: 5px 0;
+            color: #666666;
+        }
+
+       .photos .photosWrapper {
+           display: flex;
+           flex-direction: row;
+           list-style-type: none;
+       }
+        .photos .imageText {
+            margin: 10px 0;
+        }
+        .thumbImage {
+            margin: 10px 5px;
+            width: 120px;
+            height: 80px;
+        }
+        .thumbImageBase {
+            width: 120px;
+            height: 80px;
+            margin: 10px 0;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+   <div class="tableWrapper">
+       <table>
+           <thead>
+           <td>序号</td>
+           <td>姓名</td>
+           <td>课程</td>
+           <td>成绩</td>
+           </thead>
+           <tbody>
+           <tr>
+               <td>1</td>
+               <td>吕不韦</td>
+               <td>语文</td>
+               <td>100</td>
+           </tr>
+           <tr>
+               <td>2</td>
+               <td>吕布</td>
+               <td>数学</td>
+               <td>100</td>
+           </tr>
+           <tr>
+               <td>3</td>
+               <td>吕蒙</td>
+               <td>营销学</td>
+               <td>100</td>
+           </tr>
+           <tr>
+               <td>4</td>
+               <td>吕尚</td>
+               <td>数学</td>
+               <td>100</td>
+           </tr>
+           <tr>
+               <td>5</td>
+               <td>吕雉</td>
+               <td>害人学</td>
+               <td>100</td>
+           </tr>
+           <tr>
+               <td>6</td>
+               <td>吕超</td>
+               <td>体育</td>
+               <td>100</td>
+           </tr>
+           </tbody>
+       </table>
+   </div>
+
+    <div class="photos">
+        <h2>相册</h2>
+        <ul id="photosWrapper" class="photosWrapper">
+
+        </ul>
+        <img id="bigPhoto" width="500px" height="auto" src="./file/day17/05-placeholder.png" alt="">
+        <p id="imageText" class="imageText"></p>
+    </div>
+
+</body>
+<script>
+    var imagesArray  = []
+    var currentIndex = 0;
+    var ulWrapper = document.getElementById('photosWrapper')
+    function loadImageLoop() {
+        for (var  index=1;index<5;index++) {
+            let  obj = {thumbPath:'./file/day17/05-'+index+'-small.jpg',imagePath:'./file/day17/05-'+index+'.jpg',text:'美女图片'+index}
+            imagesArray.push(obj)
+        }
+        imagesArray.forEach((item,index)=>{
+            var li = document.createElement('li')
+            li.onclick = function () {
+                currentIndex = index
+                updateImages(index)
+            }
+            var img = document.createElement('img')
+
+            img.setAttribute('class', index > 0 ? 'thumbImage':'thumbImageBase')
+
+            img.setAttribute('src',item.thumbPath)
+            li.appendChild(img)
+            ulWrapper.appendChild(li)
+        })
+    }
+    loadImageLoop();
+    updateImages(0);
+    function updateImages(index) {
+        if (imagesArray.length < 1) {
+            return
+        }
+        let imageItem = imagesArray[index]
+        var bigImage  = document.getElementById('bigPhoto')
+        var imageP    = document.getElementById('imageText')
+        bigImage.setAttribute('src',imageItem.imagePath)
+        imageP.innerText = imageItem.text
+    }
+
+
+</script>
+</html>
