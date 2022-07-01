@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09_属性操作</title>
+</head>
+<body>
+<img src="https://img.tukuppt.com/ad_preview/01/29/28/m7U6SO1euT.jpg!/fw/260" alt="party">
+<img src="https://img.tukuppt.com/ad_preview/00/13/54/669jIHQuiN.jpg!/fw/260" alt="map">
+<img src="" alt="empty">
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    // 获取属性值 attr(属性名)
+    console.log($('img').eq(0).attr('src'))
+
+   setTimeout(function () {
+       //设置属性 attr(属性名,属性值)
+       $('img').eq(0).attr('src','https://img.tukuppt.com/ad_preview/01/29/75/kpKHMWZoKr.jpg!/fw/260')
+       $('img[alt=empty]').attr('src','https://img.tukuppt.com/ad_preview/00/13/54/aJQ5lvpZUM.jpg!/fw/260')
+   },1000)
+
+    //删除属性名 removeAttr(属性名)
+    $('img').eq(0).removeAttr('alt')
+
+
+
+</script>
+
+
+
+</html>

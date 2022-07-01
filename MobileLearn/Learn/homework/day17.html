@@ -8,6 +8,12 @@
             padding: 0;
             margin: 0;
         }
+        table {
+            border-collapse: collapse;
+            margin: 10px;
+            border: 1px solid #ffffff;
+
+        }
 
         table>thead {
             background-color:rgb(0,153,203) ;
@@ -43,9 +49,9 @@
             background-color: rgb(192,192,192);
         }
 
-        table>tbody>tr>td:hover {
-            color: yellow;
-        }
+        /*table>tbody>tr>td:hover {*/
+        /*    color: yellow;*/
+        /*}*/
 
         .photos {
             padding: 20px 10px;
@@ -70,11 +76,14 @@
             margin: 10px 5px;
             width: 120px;
             height: 80px;
+            cursor: pointer;
         }
+
         .thumbImageBase {
             width: 120px;
             height: 80px;
             margin: 10px 0;
+            cursor: pointer;
         }
 
 
@@ -83,13 +92,13 @@
     </style>
 </head>
 <body>
-   <div class="tableWrapper">
-       <table>
+   <div class="tableWrapper" >
+       <table border="1">
            <thead>
-           <td>序号</td>
-           <td>姓名</td>
-           <td>课程</td>
-           <td>成绩</td>
+               <td>序号</td>
+               <td>姓名</td>
+               <td>课程</td>
+               <td>成绩</td>
            </thead>
            <tbody>
            <tr>
@@ -137,12 +146,26 @@
         <ul id="photosWrapper" class="photosWrapper">
 
         </ul>
-        <img id="bigPhoto" width="500px" height="auto" src="./file/day17/05-placeholder.png" alt="">
+        <img id="bigPhoto" width="550px" height="auto" src="./file/day17/05-placeholder.png" alt="">
         <p id="imageText" class="imageText"></p>
     </div>
 
 </body>
 <script>
+
+    var trs = document.getElementsByTagName('tbody')[0].getElementsByTagName('tr')
+    //鼠标移入/移除时变色
+    for (var i=0;i<trs.length;i++){
+        trs[i].onmouseover = function () {
+            this.style.background = '#ffffff'
+        }
+        trs[i].onmouseout = function () {
+            this.style.background = ''
+        }
+    }
+
+
+
     var imagesArray  = []
     var currentIndex = 0;
     var ulWrapper = document.getElementById('photosWrapper')

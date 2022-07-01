@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+        //如果jq代码写在body前,必须将代码写在ready事件中,ready事件表示所有DOM加载完成之后才执行;
+        $(document).ready(function () {
+            console.log('11:',$('.box'))
+        })
+        //简化写法 (ready事件可以写多个,相当于JS中的onload事件,跟onload的区别是:可以出现多次,
+        //onload 在一个页面中只能出现一次)
+        $(function () {
+            console.log('22:',$('.box'))
+        })
+        $(function () {
+            console.log('33:',$('.box'))
+            //id获取
+            $('#box').css({
+                color:'red',
+                backgroundColor:'#f5f5f5',
+                marginBottom:'10px',
+            })
+            $('.box').css({
+                color:'blue',
+                backgroundColor:'#f5f5f5',
+                marginBottom:'10px',
+            })
+            $('p').css({
+                color:'pink',
+                backgroundColor:'#f5f5f5',
+                marginBottom:'10px',
+            })
+
+            //',' 逗号选择器
+            $('.box,#box,p').click(function () {
+                console.log($(this).html())
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="box">
+        class_div
+    </div>
+    <div id="box">
+        id_div
+    </div>
+    <p>2323323</p>
+
+</body>
+<!--2.CDN引入,上线之后速度会比较快,效率高-->
+<!--<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>-->
+<script>
+    console.log($('.box'))
+
+</script>
+</html>

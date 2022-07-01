@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_属性过滤器 </title>
+</head>
+<body>
+    <p title="ppp">
+        pppppp
+    </p>
+    <p title="appp">
+        appp
+    </p>
+    <p title="pp">aaaa</p>
+    <p id="p1">
+        bbbb
+    </p>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+        // [attr] -> 获取含有指定属性的元素
+        // $('p[title]').css('color','red')
+
+        // [attr=value] -> 获取属性值为value的元素
+        // $('p[title=ppp]').css('color','blue')
+
+        // [attr != value] ->获取属性值不为value的元素
+        // $('p[title!=ppp]').css('color','red')
+
+        // [attr ^=value]->属性值以value开头的元素
+        // $('p[title^=pp]').css('color','red')
+
+        // [attr $=value] ->属性值以value结尾的元素
+
+        // [attr *=value] ->属性值含有value的元素
+
+        // [attr1][attr2][attr3]->获取含有指定多个属性的元素
+</script>
+</html>

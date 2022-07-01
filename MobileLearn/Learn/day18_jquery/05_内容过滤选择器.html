@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_内容过滤选择器</title>
+</head>
+<body>
+    <p>aaaadcc</p>
+    <p>dffd</p>
+    <p>cddcdd</p>
+    <p></p>
+    <p><span></span></p>
+    <p><i><span></span></i></p>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    //:container(text) 获取包含指定文本内容的元素
+    $('p:contains(aaa)').css('color','red')
+    $('p:contains(dd)').css('color','blue')
+
+    //:empty() 获取不包含子元素/文本内容的元素
+    $('p:empty').css({
+        backgroundColor:'red',
+        height:'10px'
+    })
+
+    //:has(selector) 获取含有选择器所匹配的元素
+    $('p:has(span)').html('含有span哈哈')
+
+    // parent -> 获取含有子元素或文本的元素
+    // $('p:parent').html('p_parent')
+
+
+</script>
+
+</html>

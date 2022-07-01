@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_JQ引入</title>
+    <style>
+        div {
+            margin: 20px;
+            border: 2px solid blue;
+        }
+        button {
+            border: 1px solid transparent;
+            background-color: #ffffff;
+        }
+        .active {
+            border: 1px solid blue;
+        }
+        p { background:yellow; margin:4px; }
+
+    </style>
+</head>
+<body>
+<div class="box">
+</div>
+<div class="tabWrapper">
+    <button class="button" data-id="0">
+        北京欢迎你
+    </button>
+    <button class="button" data-id="1">
+        上海欢迎你
+    </button>
+</div>
+<div class="wrapper">
+    <button id="wrapper_button">wrap/unwrap</button>
+    <p>Hello</p>
+    <p>cruel</p>
+    <p>World</p>
+</div>
+
+<div class="append">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+
+
+</body>
+<!--1.本地引入-->
+<!--<script src="file/js/jquey_3.6.0.js"></script>-->
+
+<!--2.CDN引入,上线之后速度会比较快,效率高-->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    var  index = 0 ;
+    // console.dir($)
+    $('.box').html('欢迎光临').css('color','red').hover(function () {
+        //$(this) 当前这个对象
+        // $(this).fadeOut(2000)
+    });
+    // 元素.attr('') 获取自定义的属性值
+    // 元素.prop('') 获取内置属性的值
+    // 元素.siblings 选中节点的同胞兄弟
+    $('button').click(function (e) {
+        //.siblings 找到同胞节点
+        $(this).addClass("active").siblings().removeClass("active");
+        // dom.addClass('active')
+        // console.log('dom is:',dom)
+        // buttonsArray[index].addClass('active')
+        // buttonsArray[buttonsArray.length - 1 -index].removeClass('active')
+        // console.log($(this).attr('data-id'),$(this).prop('class'))
+    });
+    $('#wrapper_button').click(function () {
+        // if (index % 2 == 0) {
+        //     console.log('去除div_index:',index)
+        //     $("p").unwrap();
+        // } else  {
+        //     console.log('添加div_index:',index)
+        //     $('p').wrap("<div></div>");
+        // }
+        // index++;
+        $('.append').append('<p>4<p/>')
+    });
+
+
+</script>
+</html>

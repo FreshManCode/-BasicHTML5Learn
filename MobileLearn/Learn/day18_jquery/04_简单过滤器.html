@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_简单过滤器</title>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li class="li3">3</li>
+    <li>4</li>
+    <li>5</li>
+    <h1>h1</h1>
+    <h3>h3</h3>
+    <h6>h6</h6>
+</ul>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    //第一个元素
+   // $('ul li:first').css('color','red')
+   //  //最后一个元素
+   // $('ul li:last').css('color','blue')
+
+    // //除 li3 之外的样式
+    // $('ul li:not(.li3)').css('color','red')
+
+    //:even 偶数元素
+    // $('ul>li:even').mouseover(function () {
+    //     $(this).css('color','blue')
+    // })
+
+    //:odd 奇数元素
+    // $('ul>li:odd').css('color','pink')
+
+    //:eq(index) 第几个元素
+    // $('ul>li:eq(1)').css('fontSize','50px')
+
+    //:gt(index) 大于index的元素
+    $('ul>li:gt(1)').css('color','red')
+
+
+    //选择所有的 h1-h6标题
+    $(':header').css('color','red')
+
+
+</script>
+</html>
