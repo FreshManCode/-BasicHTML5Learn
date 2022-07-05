@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_尺寸相关</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #999999;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        span {
+            display: none;
+            cursor: pointer;
+            border: 1px solid #000000;
+            padding: 3px;
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <span>回到顶部</span>
+    <div style="height: 1000px"></div>
+
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+
+    // 1.获取和设置元素的尺寸
+
+    // $(dom).width() /height() 获取元素的宽度/高度
+    // console.log($('.box').width())
+    // $('.box').width('600px')
+    // console.log($('.box').width())
+
+    // $(dom).innerWidth()/innerHeight() 获取包括padding的宽度/高度
+    console.log($('.box').innerWidth())
+
+    // $(dom).outerWidth()/outerHeight() 获取包括padding和border 的宽度/高度
+    console.log($('.box').outerWidth())
+
+    // $(dom).outerWidth(true)/outerHeight(true) 获取包括padding,border,margin的宽度/高度
+    console.log($('.box').outerWidth(true))
+
+
+
+
+
+    // 2.获取相对页面的绝对位置
+    // offset()
+    console.log($('.box').offset())
+    //Object { top: 20, left: 345.6499938964844 }
+
+
+    // 3.获取浏览器可视区的宽高
+    // $(window).width()
+    // $(window).height()
+    console.log($(window).width())
+    console.log($(window).height())
+
+    // 4.获取页面滚动距离
+    // $(document).scrollTop()
+    // $(document).scrollLeft()
+    console.log("scrollTop:", $(document).scrollTop())
+
+
+    // 5.获取页面文档的宽高
+    // $(document).width()
+    // $(document).height()
+    console.log($(document).width())
+    console.log($(document).height())
+
+    showBackToTop();
+
+    //回到顶端
+    $('span').click(function () {
+        $(document).scrollTop(0)
+    })
+
+
+    function showBackToTop() {
+        //滚动时打印滚动
+        $(window).scroll(function () {
+            let scroll = Math.round($(document).scrollTop())
+            if (scroll >= 200) {
+                $('span')
+                    .fadeIn(500)
+                    .css('display','block')
+            }
+            console.log("scrollTop:", $(document).scrollTop())
+        })
+
+    }
+
+
+</script>
+
+</html>

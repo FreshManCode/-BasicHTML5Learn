@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day18</title>
+    <style>
+        table {
+            background-color: #f2f2f2;
+        }
+        td {
+            padding: 10px;
+        }
+        table>thead>tr>td {
+            padding: 5px 10px;
+            background-color: #afafaf;
+        }
+        /*table>tbody>tr:nth-child(2n + 1) {*/
+        /*    background-color: #ffffff;*/
+        /*}*/
+
+        .delete {
+            border: 1px solid lightgrey;
+            background-color: #ffffff;
+            padding:5px 10px 5px 10px;
+        }
+
+        .bigImage {
+            margin-top: 20px;
+            display: none;
+            position: absolute;
+            width: 400px;
+            height: auto;
+        }
+        .dynamicDiv {
+            position: absolute;
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+        table>tbody>tr.imageWrapper {
+             position: absolute;
+             overflow: hidden;
+        }
+       /*table>tbody>tr>.imageWrapper:hover .bigImage {*/
+       /*    display: block;*/
+       /*}*/
+
+
+    </style>
+</head>
+<body>
+<div class="table" >
+    <table  border="1" cellspacing="0">
+        <thead>
+        <tr>
+            <td>选项</td>
+            <td>编号</td>
+            <td>封面</td>
+            <td>购书人</td>
+            <td>性别</td>
+            <td>购书价</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox" id="0" ></td>
+            <td>1001</td>
+            <td class="imageWrapper">
+                <img width="80px" src="./file/day18/01.jpg">
+                <img src="./file/day18/01.jpg" alt="big"  class="bigImage">
+            </td>
+            <td>李白</td>
+            <td>男</td>
+            <td>40.99元</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="1"> </td>
+            <td>1002</td>
+            <td class="imageWrapper">
+                <img width="80px" src="./file/day18/02.jpg">
+                <img src="./file/day18/02.jpg" alt="big"  class="bigImage">
+            </td>
+            <td>王维</td>
+            <td>男</td>
+            <td>50.00元</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="2"> </td>
+            <td>1003</td>
+            <td class="imageWrapper">
+                <img width="80px" src="./file/day18/03.jpg">
+                <img src="./file/day18/03.jpg" alt="big"  class="bigImage">
+            </td>
+            <td>杜甫</td>
+            <td>男</td>
+            <td>46.60元</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><input  id="allCheckbox" type="checkbox">全选</td>
+                <td><button class="delete" id="classButton">删除</button></td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="dynamicDiv">
+        这是用来测试动态鼠标移入显示/移除消失的Test
+    </div>
+
+
+
+
+</div>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+
+    //隔行变色
+    $('.table table tr:nth-child(even)').css('background-color','#ffffff')
+
+    $('input[type=checkbox]').click(function () {
+        const  $this= $(this)
+        console.log( $this.attr('id'))
+        console.log($this.prop('checked'))
+    })
+
+    $('input[id=allCheckbox]').click(function () {
+        const  checked = this.checked;
+        console.log('checked:',checked)
+        const isChecked = $(this).prop('checked')
+        $('input[type=checkbox]').prop('checked',isChecked)
+    })
+
+    //单击删除按钮,执行删除操作
+    $('#classButton').click(function () {
+        // 使用jquery$('input[type=checkbox]:checked')
+        // let selectedDOM = $('input[type=checkbox]:checked')
+        // deleteDOM(selectedDOM)
+
+        // 查找节点,遍历,选中时找到父节点并删除
+        // deleteParentDOM()
+
+    })
+
+    function deleteDOM(selectedDOM) {
+        var index = 0;
+        while (index < selectedDOM.length) {
+            let dom = selectedDOM[0]
+            let id_index = dom.getAttribute('id')
+            let td = $('tbody tr:eq('+id_index+')')
+            td.remove()
+            index ++
+        }
+        console.log('selectedDOM:',selectedDOM,'length:',selectedDOM.length)
+    }
+
+    function deleteParentDOM() {
+        let inputDOM = $('input[type=checkbox]')
+        if (inputDOM.length > 0) {
+            $.each(inputDOM,function (index,item) {
+                if (this.checked) {
+                    //根据当前节点寻找其父节点 ,$符号比不可少
+                    let parentDOM = $(this).parent().parent()
+                    console.log(parentDOM)
+                    parentDOM.empty()
+
+                }
+            })
+        }
+    }
+
+
+    //鼠标移动到图片上时,预览该图片
+    var x = 5,y  = 15; //初始化图片的提示位置
+    $('.imageWrapper img').mouseover(function (e) {
+        console.log($(this).attr('src'))
+        $('.dynamicDiv')
+            .fadeIn(500)
+            .css({
+                // 获取当前鼠标的位置
+                top:(e.pageY+y)+'px',
+                left:(e.pageX +x) +'px',
+            })
+    });
+
+    $('.imageWrapper img').mouseout(function () {
+        $('.dynamicDiv').css({
+            display:'none',
+        })
+    });
+
+
+
+</script>
+</html>

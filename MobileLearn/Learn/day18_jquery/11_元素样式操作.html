@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_元素样式操作</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .bgc {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+<p>1231231213</p>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    //
+    // a.设置样式
+    // $('p').css('color','red')
+    // css('属性名','属性值') 设置一个样式
+    // css({'属性名':'属性值','属性名':'属性值'}) 设置多个样式
+    // $('p').css({'color':'red','backgroundColor':'pink'})
+
+
+    // b.操作类
+    // i)添加类
+    // addClass('类名') / addClass('类名1 类名2 ...')
+
+    $('p').addClass('red bgc')
+
+    // ii)删除类 *removeClass('类名') / removeClass('类名1 类名2 ...')
+
+    // 清除所有class
+    // $('p').removeClass()
+    //删除一个/多个指定的class
+    $('p').removeClass('red')
+
+
+
+
+
+</script>
+</html>

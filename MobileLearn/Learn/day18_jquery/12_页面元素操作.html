@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_页面元素操作</title>
+    <style>
+        .box {
+            border: 1px solid pink;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p>123</p>
+    <p>123</p>
+</div>
+<div class="box" title="box2">
+    <p>123_box2</p>
+    <p>123_box2</p>
+</div>
+<p class="p">
+    pppppppp
+</p>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    //
+    // 4.页面元素操作
+    //
+    // a. 创建DOM节点
+    // $(dom节点内容)
+    let dom =  $('<p><span>这是添加的内容</span> <p/>');
+    console.log('dom is:',dom)
+
+    // b. 在内部添加DOM节点
+    // append()
+    // $('.box').append(dom)
+    // appendTo() 把子节点添加到父节点
+    // $(dom).appendTo($('.box'))
+
+
+    // prepend() 将节点添加到前面
+    // $('.box').prepend(dom)
+    // prependTo()
+
+
+    // c. 在外部添加DOM节点
+
+    // 在头部插入
+    // before()
+    // insertBefore()
+
+    //在尾部插入
+    // after()
+    // insertAfter()
+
+    $('.box').before($('<strong>stronghaha<strong/>'))
+    $('<p><strong>12212<strong/></p> ').insertBefore($('.box'))
+
+
+    $('.p').click(function () {
+        alert('1111')
+    })
+
+    // d. 复制DOM节点
+    // clone()
+    // 只是clone了p标签,并没有把事件克隆
+    // $('.box').append($('.p').clone())
+    // 也会把事件一起克隆
+    $('.box').append($('.p').clone(true))
+    // clone(true)
+
+
+
+    // e. 删除DOM节点
+    // remove()
+    // remove(don节点)
+    // empty()
+    //删除子节点以及当前父节点
+    // $('.box').remove()
+
+    //只删除了子节点
+    // $('.box').empty()
+
+    $('.box[title]').remove()
+</script>
+
+</html>

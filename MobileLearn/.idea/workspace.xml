@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/01_JQ引入.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/02_基本选择器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/03_层次选择器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/04_简单过滤器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/05_内容过滤选择器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/06_可见性过滤器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/07_属性过滤器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/08_表单选择器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/09_属性操作.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/10_文本内容操作.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/file/js/jquey_3.6.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/11_元素样式操作.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day18_jquery/12_页面元素操作.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day19_jquery进阶/01_尺寸相关.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/day18.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/file/day18/01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/file/day18/02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/file/day18/03.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learn/homework/day17.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/homework/day17.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,19 +48,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Learn/homework/file/day17" />
-      <recent name="$PROJECT_DIR$/Learn/homework/file/emoj" />
-      <recent name="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file" />
-      <recent name="$PROJECT_DIR$/Learn/day11/public/css" />
-      <recent name="$PROJECT_DIR$/Learn/day10/file/SVG" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Learn/day18_jquery" />
       <recent name="$PROJECT_DIR$/Learn/homework" />
       <recent name="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file/images" />
       <recent name="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作" />
       <recent name="$PROJECT_DIR$/Learn/day11/file/imgs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Learn/homework/file/day18" />
+      <recent name="$PROJECT_DIR$/Learn/homework/file/day17" />
+      <recent name="$PROJECT_DIR$/Learn/homework/file/emoj" />
+      <recent name="$PROJECT_DIR$/Learn/day17_JS高级_JSON和DOM操作/file" />
+      <recent name="$PROJECT_DIR$/Learn/day11/public/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -109,7 +104,10 @@
       <workItem from="1656378919871" duration="3284000" />
       <workItem from="1656412572767" duration="1703000" />
       <workItem from="1656466304126" duration="7651000" />
-      <workItem from="1656637830678" duration="2683000" />
+      <workItem from="1656637830678" duration="2862000" />
+      <workItem from="1656659664092" duration="494000" />
+      <workItem from="1656896386630" duration="2572000" />
+      <workItem from="1656916016487" duration="11022000" />
     </task>
     <servers />
   </component>
@@ -244,21 +242,22 @@
     </state>
     <state x="698" y="114" key="SettingsEditor/0.25.1680.949@0.25.1680.949" timestamp="1651802124492" />
     <state x="698" y="116" key="SettingsEditor/0.25.1680.965@0.25.1680.965" timestamp="1651116948539" />
-    <state x="830" y="249" width="674" height="502" key="find.popup" timestamp="1655708753964">
-      <screen x="0" y="25" width="1680" height="968" />
+    <state x="830" y="64" width="702" height="685" key="find.popup" timestamp="1656659821964">
+      <screen x="0" y="25" width="1680" height="965" />
     </state>
     <state x="830" y="243" width="674" height="486" key="find.popup/0.25.1680.940@0.25.1680.940" timestamp="1653288947730" />
     <state x="830" y="244" width="674" height="486" key="find.popup/0.25.1680.945@0.25.1680.945" timestamp="1653283047111" />
     <state x="830" y="245" width="674" height="486" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1651895900997" />
     <state x="830" y="245" width="674" height="488" key="find.popup/0.25.1680.951@0.25.1680.951" timestamp="1652781556939" />
     <state x="830" y="247" width="674" height="496" key="find.popup/0.25.1680.958@0.25.1680.958" timestamp="1653729165343" />
+    <state x="830" y="64" width="702" height="685" key="find.popup/1680.25.1920.1055/0.25.1680.965@0.25.1680.965" timestamp="1656659821964" />
     <state x="830" y="249" width="674" height="502" key="find.popup/1680.25.1920.1055/0.25.1680.968@0.25.1680.968" timestamp="1655708753964" />
     <state x="437" y="209" key="run.anything.popup" timestamp="1652523835740">
       <screen x="0" y="25" width="1680" height="940" />
     </state>
     <state x="437" y="209" key="run.anything.popup/0.25.1680.940@0.25.1680.940" timestamp="1652523835740" />
-    <state x="718" y="304" width="670" height="691" key="search.everywhere.popup" timestamp="1655712335954">
-      <screen x="0" y="25" width="1680" height="968" />
+    <state x="718" y="303" width="670" height="689" key="search.everywhere.popup" timestamp="1656659697863">
+      <screen x="0" y="25" width="1680" height="965" />
     </state>
     <state x="718" y="295" width="670" height="671" key="search.everywhere.popup/0.25.1680.940@0.25.1680.940" timestamp="1652691527090" />
     <state x="718" y="296" width="670" height="673" key="search.everywhere.popup/0.25.1680.942@0.25.1680.942" timestamp="1652762268301" />
@@ -268,6 +267,7 @@
     <state x="718" y="301" width="670" height="685" key="search.everywhere.popup/0.25.1680.960@0.25.1680.960" timestamp="1652347697236" />
     <state x="718" y="302" width="670" height="687" key="search.everywhere.popup/0.25.1680.964@0.25.1680.964" timestamp="1652318837712" />
     <state x="718" y="304" width="670" height="691" key="search.everywhere.popup/0.25.1680.969@0.25.1680.969" timestamp="1654416658779" />
+    <state x="718" y="303" width="670" height="689" key="search.everywhere.popup/1680.25.1920.1055/0.25.1680.965@0.25.1680.965" timestamp="1656659697863" />
     <state x="718" y="304" width="670" height="691" key="search.everywhere.popup/1680.25.1920.1055/0.25.1680.968@0.25.1680.968" timestamp="1655712335954" />
   </component>
   <component name="XDebuggerManager">
