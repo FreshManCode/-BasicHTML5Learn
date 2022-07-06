@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_事件</title>
+</head>
+<style>
+    .father {
+        width: 400px;
+        height: 300px;
+        background-color: #f00;
+    }
+    .son {
+        width: 200px;
+        height: 100px;
+        background-color: #ffff00;
+    }
+</style>
+<body>
+<div class="box">
+    box
+</div>
+<div class="father">
+    <div class="son"></div>
+</div>
+<form action="">
+    <input type="text" name="user">
+    <input type="submit" value="提交">
+</form>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    //click() 鼠标单击
+    $('.box').click(function () {
+        $(this).html('这是click事件触发的结果').css('color','red')
+    })
+
+    //mouseover() 鼠标移入(进入子元素也触发)
+    // $('.box').mouseover(function () {
+    //     $(this).html('这是click事件触发的结果').css('color','red')
+    // }).mouseout(function () {
+    //     //mouseout() 鼠标离开(离开子元素也触发)
+    //     $(this).css('color','#000')
+    // })
+
+    //多个事件的绑定 bind,现在用on
+    // $('.box').bind('mouseover mouseout',function () {
+    //     console.log('111111')
+    // })
+
+    // $('.box').on('mouseover mouseout',function () {
+    //     console.log('111111')
+    // })
+
+    //事件绑定只会执行一次
+    // $('.box').one('mouseover mouseout',function () {
+    //     console.log('111111')
+    // })
+
+    // $('.father').mouseover(function () {
+    //     console.log('father')
+    // })
+    // $('.son').mouseover(function () {
+    //     console.log('son')
+    // })
+
+
+    //mouseenter() 会阻止事件冒泡 (进入子元素不触发)
+    $('.father').mouseenter(function () {
+        console.log('father')
+    })
+    $('.son').mouseenter(function () {
+        console.log('son')
+    })
+
+    //keydown() 按下键盘键
+    // $('input[name=user]').keydown(function (e) {
+    //     // console.log('e:',e)
+    //     //按下回车键
+    //     if (e.keyCode == 13) {
+    //         console.log('input_value:',$(this).val())
+    //     }
+    // })
+
+    //keypress() 从键盘输入字符
+    // $('input[name=user]').keypress(function (e) {
+    //     //输入大写A
+    //     if (e.charCode == 65) {
+    //         console.log('input_value:',$(this).val())
+    //     }
+    // })
+
+    //focus() 元素获得焦点
+    // $('input[name=user]').focus(function () {
+    //     console.log('获取焦点了')
+    // })
+    // //blur() 失焦
+    // $('input[name=user]').blur(function () {
+    //     var val = $(this).val();
+    //     if (val.length < 2 || val.length > 8) {
+    //         alert('您输入的长度不对,应该输入2-8个字符之间')
+    //     }
+    // })
+
+
+    //submit() 用户提交表单 ,针对的DOM是form表单
+    $('form').submit(function () {
+        alert('submit')
+    })
+
+    //hover() 为mouseentry 和mouseleave 事件的指定函数
+    // $('.box').hover(function () {
+    //     $(this).css('color','red')
+    // },function () {
+    //     $(this).css('color','blue')
+    // })
+
+    // 该上下两段代码是等价的
+
+    // $('.box').mouseenter(function () {
+    //     $(this).css('color','red')
+    // }).mouseleave(function () {
+    //     $(this).css('color','blue')
+    // })
+
+    $(window).resize(function () {
+        console.log('111')
+    })
+
+
+</script>
+
+</html>

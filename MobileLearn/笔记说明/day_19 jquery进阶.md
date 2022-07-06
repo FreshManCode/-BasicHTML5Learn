@@ -16,4 +16,32 @@
 * 5.获取页面文档的宽高
 	* $(document).width()
 	* $(document).height()
+
+### 2.遍历DOM
+
+	$(dom).each(function(index,item){
+		//index 为下标
+		//item 为遍历的每一个DOM元素
 	
+	})
+### 3.事件
+* blur() 失焦
+* click() 单击
+* mouseover()鼠标移入 (进入子元素也触发)
+* mouseout() 鼠标离开 (离开子元素也触发)
+* mouseenter() 鼠标进入 (进入子元素不触发)
+* mouseleave()鼠标离开	(离开子元素不触发)
+* keydown() 按下键盘键
+* keyup() 松开键盘键
+* keypress() 从键盘输入字符
+* focus() 元素获得焦点
+* submit() 提交
+* hover(function1,function2) 为mouseentry 和mouseleave 事件的指定函数
+* ready() DOM加载完成
+* resize() 浏览器窗口大小改变 
+
+		$(window).resize(function () {
+	
+	    }) 
+	
+		
