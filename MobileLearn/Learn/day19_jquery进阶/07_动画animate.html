@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_动画animate</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 400px;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+    <button>animate</button>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    //animate()
+
+    $('button').eq(0).click(function () {
+        // backgroundColor:'pink', 在animate 属性中不生效
+        $('.box').animate({
+            rotate:'360deg',
+            width:"100px",
+            height:'100px',
+        },2000)
+
+    })
+
+
+</script>
+</html>

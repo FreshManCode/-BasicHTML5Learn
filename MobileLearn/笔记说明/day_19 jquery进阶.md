@@ -44,4 +44,19 @@
 	
 	    }) 
 	
-		
+### 4.动画
+* 1. 显示/隐藏/切换)
+	* show() 
+	* hide()
+	* toggle()	 
+* 2.上下滑动
+	* slideDown()
+	* slideUp()
+* 3.淡入淡出
+	* fadeIn()
+	* fadeOut()
+	* fadeTo() 淡入到指定的不透明度
+* 4.动画
+	* animate()     
+	* 支持以下属性:
+		*   		

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day19</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+        ul li {
+            margin: 5px;
+            width: auto;
+            padding:10px ;
+            background-color: #f2f2f2;
+        }
+        ul li span {
+            margin: 0 10px;
+        }
+        ul li button {
+            margin: 0 10px;
+            padding: 5px 25px;
+            border: 1px solid #999999;
+        }
+        .alertWrapper {
+            width: 100vw;
+            height:100vh;
+            top: 0;
+            left: 0;
+            background-color: #333333;
+            display: none;
+            position: fixed;
+            z-index: 1000;
+        }
+        .modalWrapper {
+            width: 600px;
+            margin: 200px auto;
+            border: 6px solid #999999;
+        }
+        .titleWrapper {
+            background-color: #D99612;
+            color: #ffffff;
+            padding:15px 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .contentWrapper {
+            background-color: #ffffff;
+            color: #666666;
+            font-size: 16px;
+            padding: 50px 20px;
+            overflow: hidden;
+        }
+        .contentWrapper img {
+            float: left;
+            margin: 0 15px;
+        }
+        .contentWrapper p {
+            margin-top: 5px;
+            float: left;
+            margin-bottom: 50px;
+        }
+
+        .footerWrapper {
+            padding:20px 10px;
+            background-color: #f2f2f2;
+            color: #666666;
+            overflow: hidden;
+        }
+        .footerWrapper button {
+            float: right;
+            border: 1px solid #666666;
+            padding: 5px 20px;
+            margin: 0 10px;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="record">
+    <li><input type="checkbox"> <span>这是一条可删除的记录1</span> <button>删除</button> </li>
+    <li><input type="checkbox"> <span>这是一条可删除的记录2</span> <button>删除</button> </li>
+    <li><input type="checkbox"> <span>这是一条可删除的记录3</span> <button>删除</button> </li>
+    <li><input type="checkbox"> <span>这是一条可删除的记录3</span> <button>删除</button> </li>
+</ul>
+<div class="alertWrapper" id="alertWrapper">
+    <div class="modalWrapper">
+        <div class="titleWrapper">
+            <p>删除时提示</p>
+            <img id="closeImage" src="./file/day19/close.gif" alt="">
+        </div>
+        <div class="contentWrapper">
+            <img src="./file/day19/delete.jpg" alt="删除">
+            <p>您真的要删除该条记录吗?</p>
+        </div>
+        <div class="footerWrapper">
+            <button>取消</button>
+            <button>确定</button>
+        </div>
+
+    </div>
+
+</div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    var selectedDom = []
+    $('.record button').click(function () {
+        let selectedCheckbox = $('input[type=checkbox]:checked')
+        selectedDom = selectedCheckbox
+        if (selectedCheckbox.length > 0) {
+            showModal(true)
+        }
+        console.log('selectedCheckbox:',selectedCheckbox,'length:',selectedCheckbox.length)
+    })
+
+    $('#closeImage').click(function () {
+        showModal(false)
+    })
+
+    $('.footerWrapper button').eq(0).click(function () {
+        showModal(false)
+    })
+
+    $('.footerWrapper button').eq(1).click(function () {
+        console.log('删除节点')
+        deleteItem()
+        showModal(false)
+    })
+
+    function showModal(show) {
+        show ? $('#alertWrapper').show(200) :  $('#alertWrapper').hide(200)
+    }
+
+    function deleteItem() {
+        for (var index= 0;index < selectedDom.length;index ++) {
+            let currentNode = selectedDom[0]
+            $(currentNode).parent().remove()
+        }
+    }
+</script>
+</html>
