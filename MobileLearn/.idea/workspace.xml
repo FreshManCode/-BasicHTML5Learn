@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Learn/day19_jquery进阶/04_动画.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day19_jquery进阶/05_动画上下滑动.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day19_jquery进阶/06_动画淡入淡出.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/day19_jquery进阶/07_动画animate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learn/homework/day19.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day20_json_ajax_跨域/01JSON表示方式.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learn/homework/day19.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/homework/day19.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记说明/day_19 jquery进阶.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记说明/day_19 jquery进阶.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +105,8 @@
       <workItem from="1656896386630" duration="2572000" />
       <workItem from="1656916016487" duration="11022000" />
       <workItem from="1657013107375" duration="4873000" />
-      <workItem from="1657096523020" duration="4640000" />
+      <workItem from="1657096523020" duration="5632000" />
+      <workItem from="1657241962334" duration="3212000" />
     </task>
     <servers />
   </component>

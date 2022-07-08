@@ -77,16 +77,24 @@
             padding: 5px 20px;
             margin: 0 10px;
         }
+        .testDiv {
+            height: 1000px;
+            background-color: red;
+        }
 
     </style>
 </head>
 <body>
+<div class="testDiv">
+
+</div>
 <ul class="record">
     <li><input type="checkbox"> <span>这是一条可删除的记录1</span> <button>删除</button> </li>
     <li><input type="checkbox"> <span>这是一条可删除的记录2</span> <button>删除</button> </li>
     <li><input type="checkbox"> <span>这是一条可删除的记录3</span> <button>删除</button> </li>
     <li><input type="checkbox"> <span>这是一条可删除的记录3</span> <button>删除</button> </li>
 </ul>
+
 <div class="alertWrapper" id="alertWrapper">
     <div class="modalWrapper">
         <div class="titleWrapper">
@@ -108,6 +116,23 @@
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
 <script>
+
+    //让对话框上下居中
+    function calculateMiddlePosition() {
+        const  height = $(window).height()
+        const  contentH = $('.modalWrapper').height()
+        const  top = (height - contentH) / 2
+        console.log('height:',height,'contentH:',contentH,'top:',top)
+        // 如果弹出该框,则调整上下间距
+        if ($('.modalWrapper').is(':visible')){
+            console.log('modal_visible')
+            $('.modalWrapper').css({
+                marginTop:top,
+            })
+        }
+
+    }
+
     var selectedDom = []
     $('.record button').click(function () {
         let selectedCheckbox = $('input[type=checkbox]:checked')
@@ -134,6 +159,7 @@
 
     function showModal(show) {
         show ? $('#alertWrapper').show(200) :  $('#alertWrapper').hide(200)
+        show && calculateMiddlePosition();
     }
 
     function deleteItem() {

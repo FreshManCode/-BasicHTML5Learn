@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01JSON表示方式</title>
+</head>
+<body>
+<div class="wrapper">
+    <ul class="ulWrapper">
+
+    </ul>
+</div>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<script>
+    //1.对象表示方式
+    var obj = {
+        name :'Libai',
+        age : '18',
+    }
+
+    //2.数组
+    var sex = [
+        "男",
+        "女"
+    ]
+
+    //3.对象+数组
+    var students = [
+        {
+            name :'Libai',
+            age : '18',
+        },
+        {
+            name :'Libai',
+            age : '18',
+        },
+        {
+            name :'Libai',
+            age : '18',
+        }
+    ]
+
+    function dyanmicAppendLi() {
+        for (let item of students) {
+            $('.ulWrapper').append('<li><td>'+ item.name +'</td><td>'+ item.age +'</td></li>')
+        }
+    }
+    dyanmicAppendLi();
+
+
+
+
+</script>
+</html>
