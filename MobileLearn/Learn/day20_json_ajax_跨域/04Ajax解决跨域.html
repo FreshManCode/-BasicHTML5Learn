@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04Ajax解决跨域</title>
+    <style>
+        .ulWrapper {
+            margin: 20px;
+        }
+        .ulWrapper li {
+            margin: 10px 0;
+        }
+        h3 {
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h3>每日一笑话</h3>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+
+    const currentDate = new Date()
+    console.dir(currentDate)
+
+    const  currentTimeSoap = currentDate.getTime()
+
+    console.log('currentTimeSoap:',currentDate.getTime())
+
+    const  url = 'http://v.juhe.cn/joke/content/list.php'
+    const  data = {sort:'desc',page:'1',pagesize:'20',time:currentTimeSoap,key:'88c389e31540c946cdd068736ed80fa1'}
+
+    //直接发送请求,不做任何处理会出现跨域问题
+    $.ajax('https://www.juhe.cn/getPubKey')
+        .then(function (res) {
+            console.log('res is:',res)
+    })
+        .catch(function (error) {
+            console.log('error is:',error)
+    })
+
+    // 使用jsonp解决跨域问题
+    $.ajax({url:url,dataType:'jsonp',data:data,})
+        .then(function (res) {
+            if (res.result.data) {
+                createList(res.result.data)
+            }
+            console.log('res is:',res)
+        })
+        .catch(function (error) {
+            console.log('error is:',error)
+        })
+
+    function createList(listArray) {
+        var innerHTML = ''
+        listArray.forEach((item,index)=>{
+            console.log('item:',item,'index:',index)
+            innerHTML += '<li>' + item.content + '</li>'
+        })
+        console.log('innerHTML:',innerHTML)
+        $('body').append('<ol class="ulWrapper"> <ol/>')
+        $('body .ulWrapper').append(innerHTML)
+    }
+
+</script>
+
+</html>

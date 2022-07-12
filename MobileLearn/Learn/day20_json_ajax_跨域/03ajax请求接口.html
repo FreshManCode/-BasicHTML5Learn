@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03ajax请求接口</title>
+</head>
+<body>
+<ul class="myUL">
+    <li >
+        li1
+        <ul>
+            <li>li_1</li>
+            <li>li_2</li>
+            <li>li_3</li>
+            <li>li_4</li>
+            <li>li_5</li>
+        </ul>
+    </li>
+    <li >
+    li2
+        <ul>
+            <li>li_1</li>
+            <li>li_2</li>
+            <li>li_3</li>
+            <li>li_4</li>
+            <li>li_5</li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    $.ajax({
+        url:'http://www.hspstudio.club/seller',
+    }).then(function (res) {
+        console.log('res is:',res)
+    })
+
+    function directFatherAndSon() {
+        // 只查询myUL 中的直接子标签 li ,如果li中含有子标签li,不会被查找
+        const  ul1 = $('.myUL>li')
+        // 查询myUL 中的所有li 子标签
+        const  ul2 = $('.myUL li')
+        console.log('ul1:',ul1)
+        console.log('ul2:',ul2)
+    }
+    directFatherAndSon();
+</script>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头学习</title>
+    <style>
+        div {
+            margin: 20px;
+        }
+
+/*
+ 实心箭头
+*/
+        .solidArrow {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-left-color: red;
+        }
+
+        /* 边框箭头 */
+        .borderArrow {
+            width:10px;
+            height: 10px;
+            border-right: 2px solid red;
+            border-top: 2px solid red;
+            /*通过旋转实现箭头的方向*/
+            transform: rotate(45deg);
+        }
+
+            .tip {
+                padding: 8px 12px;
+                display: inline-block;
+                background: #fff;
+                border: #c6ffdd;
+                position: relative;
+                border-radius: 5px;
+                min-height: 50px;
+                min-width: 150px;
+                border: 1px solid rgb(255, 170, 170);
+            }
+            .tip span {
+                background: linear-gradient(-60deg, #f7797d, #fbd786, #c6ffdd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
+
+            /*.tip::after {*/
+            /*    content: "";*/
+            /*    position: absolute;*/
+            /*    width: 0;*/
+            /*    height: 0;*/
+            /*    top: 0;*/
+            /*    bottom: 0;*/
+            /*    margin: auto;*/
+            /*    left: -6px;*/
+            /*    border-top: 8px solid transparent;*/
+            /*    border-bottom: 8px solid transparent;*/
+            /*    border-right: 8px solid #fff;*/
+            /*    z-index: 0;*/
+            /*}*/
+
+             /*向右旋转45度的正方形*/
+            .tip::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: -6.3px;
+                z-index: 0;
+                border: 1px solid rgb(255, 170, 170);
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                transform: rotate(45deg);
+                border-right: transparent;
+                border-top: transparent;
+            }
+
+
+
+        .section {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .overflowEllipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            width: 150px;
+        }
+        .overflowLineEllipsis {
+            padding: 10px;
+            padding-bottom: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            width: 150px;
+            border: 1px solid blue;
+        }
+
+        .overflowLineEllipsis:before {
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 2px solid transparent;
+            border-left: 1px solid blue;
+            border-top: 1px solid blue;
+            transform: rotate(45deg);
+            margin-top: -15.5px;
+            margin-left: 5px;
+            /* 这个颜色与div背景色相同,即可消除箭头下面的div的边框颜色 */
+            background: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="solidArrow">
+
+</div>
+
+<div class="borderArrow">
+
+</div>
+
+<div class="section">
+    <h1>带边框的tip</h1>
+    <div class="tip"><span>带边框的tip</span></div>
+</div>
+<div class="section">
+    <h1>省略号</h1>
+    <div class="overflowEllipsis">这是一个超长超长超长超长超长超长超长超长超长超长超长的文本</div>
+    <div class="overflowLineEllipsis">这是一个两行省略的超长超长超长超长超长超长超长超长超长超长超长的文本</div>
+</div>
+
+</body>
+</html>

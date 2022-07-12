@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02认识Ajax</title>
+</head>
+<body>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script>
+    $.ajax({
+        type:'get',
+        url:'../file/json/cardlist.json',
+        success:function (res) {
+            console.log('res is:',res)
+        },
+        error:function (error) {
+            if (error.status == 404) {
+                window.location.href = '404'
+
+            }
+            console.log('error is:',error)
+        },
+    })
+
+    //写法2
+    $.ajax('../file/json/cardlist.json').done(function (res) {
+        console.log('形式2res:',res)
+    }).fail(function (error) {
+
+    })
+
+    //写法3
+    $.ajax('../file/json/cardlist.json').then(function (res) {
+        console.log('写法三res:',res)
+    }).catch(function (error) {
+
+    })
+
+</script>
+</html>

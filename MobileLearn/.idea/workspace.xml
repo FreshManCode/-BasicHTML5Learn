@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f00ee2d2-03b6-4870-a396-0845f5cbba7a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Learn/day20_json_ajax_跨域/01JSON表示方式.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day20_json_ajax_跨域/02认识Ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day20_json_ajax_跨域/03ajax请求接口.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/day20_json_ajax_跨域/04Ajax解决跨域.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/file/json/cardlist.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn/homework/箭头学习.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learn/homework/day19.html" beforeDir="false" afterPath="$PROJECT_DIR$/Learn/homework/day19.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记说明/day_19 jquery进阶.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记说明/day_19 jquery进阶.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记说明/day20 json,ajax,跨域.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记说明/day20 json,ajax,跨域.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +109,8 @@
       <workItem from="1656916016487" duration="11022000" />
       <workItem from="1657013107375" duration="4873000" />
       <workItem from="1657096523020" duration="5632000" />
-      <workItem from="1657241962334" duration="3212000" />
+      <workItem from="1657241962334" duration="7640000" />
+      <workItem from="1657501307353" duration="5884000" />
     </task>
     <servers />
   </component>
@@ -257,7 +261,7 @@
     </state>
     <state x="698" y="114" key="SettingsEditor/0.25.1680.949@0.25.1680.949" timestamp="1651802124492" />
     <state x="698" y="116" key="SettingsEditor/0.25.1680.965@0.25.1680.965" timestamp="1651116948539" />
-    <state x="830" y="64" width="702" height="685" key="find.popup" timestamp="1657170884818">
+    <state x="830" y="64" width="702" height="685" key="find.popup" timestamp="1657611888060">
       <screen x="0" y="25" width="1680" height="965" />
     </state>
     <state x="830" y="243" width="674" height="486" key="find.popup/0.25.1680.940@0.25.1680.940" timestamp="1653288947730" />
@@ -265,7 +269,7 @@
     <state x="830" y="245" width="674" height="486" key="find.popup/0.25.1680.949@0.25.1680.949" timestamp="1651895900997" />
     <state x="830" y="245" width="674" height="488" key="find.popup/0.25.1680.951@0.25.1680.951" timestamp="1652781556939" />
     <state x="830" y="247" width="674" height="496" key="find.popup/0.25.1680.958@0.25.1680.958" timestamp="1653729165343" />
-    <state x="830" y="64" width="702" height="685" key="find.popup/1680.25.1920.1055/0.25.1680.965@0.25.1680.965" timestamp="1657170884818" />
+    <state x="830" y="64" width="702" height="685" key="find.popup/1680.25.1920.1055/0.25.1680.965@0.25.1680.965" timestamp="1657611888060" />
     <state x="830" y="249" width="674" height="502" key="find.popup/1680.25.1920.1055/0.25.1680.968@0.25.1680.968" timestamp="1655708753964" />
     <state x="437" y="209" key="run.anything.popup" timestamp="1652523835740">
       <screen x="0" y="25" width="1680" height="940" />
